@@ -36,7 +36,6 @@ const { fetchJson, fetchText } = require('./lib/fetcher')
 const request = require('request')
 const { recognize } = require('./lib/ocr')
 const fs = require('fs')
-const yts = require( 'yt-search')
 const crypto = require('crypto') 
 const ms = require('parse-ms')
 const speed = require('performance-now')
@@ -75,7 +74,6 @@ cr = setting.cr
 ownerrf = setting.ownerrf
 ownerrz = setting.ownerrz
 tz = setting.tz 
-fx = setting.fx
 cr1 = setting.cr1
 cr2 = setting.cr
 promote = '*Hola Bienvenido🥳*'
@@ -93,16 +91,15 @@ ownername = setting.ownername
 donasi = setting.donasi
 l0lhuman = setting.l0lhuman
 pulsa = setting.pulsa
-ftake = 'Lord nayla Mengintai•_•',
+ftake = 'Lord Manik Mengintai•_•',
 gopay = setting.gopay
 ovo = setting.ovo
-btre = 'Sisa Energi:\n[BELOM DETECT]'
 baterai = {
     baterai: 0,
     cas: false
 }
 dana = setting.dana
- battre = 100
+ 
 // NOTE MAU UBAH??? SILAHKAN UBAH DI SRC + SETTINGS.JSON
 /* ===================================================[ Felixcrack ]==============================================================*/    
 /*=====================================================[ ROOM TO FILE ]==============================================================*/                  	                         	 
@@ -118,15 +115,11 @@ const antiwibu = JSON.parse(fs.readFileSync('./nayla/antiwibu.json'))
 const antijawa = JSON.parse(fs.readFileSync('./nayla/antijawa.json'))
 const prem = JSON.parse(fs.readFileSync('./nayla/prem.json'))
 const welkom = JSON.parse(fs.readFileSync('./nayla/welkom.json'))
-const _limit = JSON.parse(fs.readFileSync('./database/json/limit.json'))
 const antigay = JSON.parse(fs.readFileSync('./nayla/antigay.json'))
 const antibocil = JSON.parse(fs.readFileSync('./nayla/antibocil.json'))
 const botx = JSON.parse(fs.readFileSync('./nayla/botx.json')) 
-const imageh = fs.readFileSync('./lib/♡.jpeg')
-const { help } = require('./src/help')
 /* ===================================================[ Felixcrack ]==============================================================*/    
-/*======================================================[ TIME BOTZ ]==============================================================*/                
- 	                    	              
+/*======================================================[ TIME BOTZ ]==============================================================*/                  	                    	              
             function kyun(seconds){
             function pad(s){
             return (s < 10 ? '0' : '') + s;
@@ -181,16 +174,10 @@ const { help } = require('./src/help')
 ┃@${num.split('@')[0]}👋
 ┃BIENVENIDO AL GRUPO 
 ┃*${mdata.subject}*
-┃Usa ${prefix}fxbot\n┃Para Poder Usar El Bot
-┗━━━━━━━━━━━━━━━━━
-┏━━━━━━━━━━━━━━━━━
-┃「 *_INFO DEL GRUPO_* 」
-┠⊷️ Admins:
-┠⊷️ Miembros:
 ┗━━━━━━━━━━━━━━━━━
 ┏━━━━━━━━━━━━━━━━━
 ┃   「 *_BIENVENIDO_* 」
-┗━━━━━━━━━━━━━━━━━
+┗━━━━━━━━━━━━━━━━━,
 ┏━━━━━━━━━━━━━━━━━
 ┠⊷️ *Suscríbete*:
 ┠⊷️*http://bit.ly/2ZUH2jP
@@ -227,7 +214,6 @@ ${leave}	`
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
 			let buff = await getBuffer(ppimg)
-			
 			teks = `𝙉𝙐𝙀𝙑𝙊 𝘼𝙆𝙈𝙄𝙉
 			
 \`\`\`Nombre :\`\`\` ${num.replace('@s.whatsapp.net', '')}
@@ -313,45 +299,13 @@ ${demote}`
 			const isEventon = isGroup ? event.includes(from) : false
 			const isAntigay = isGroup ? antigay.includes(from) : false
 			const isAntibocil = isGroup ? antibocil.includes(from) : false
-            const ftoko = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "productMessage": { "product": { "productImage":{ "mimetype": "image/jpeg", "jpegThumbnail": fs.readFileSync(`./src/fx.jpg`)}, "title": ftake, "description": "FzBot", "currencyCode": "USD", "priceAmount1000": "5000000000", "retailerId": "naylaGanz", "productImageCount": 1}, "businessOwnerJid": `12603763944@s.whatsapp.net`}}}
+            const ftoko = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "productMessage": { "product": { "productImage":{ "mimetype": "image/jpeg", "jpegThumbnail": fs.readFileSync(`./src/fx.jpg`)}, "title": ftake, "description": "FzBot", "currencyCode": "USD", "priceAmount1000": "5000000000", "retailerId": "ManikGanz", "productImageCount": 1}, "businessOwnerJid": `12603763944@s.whatsapp.net`}}}
 			const isAntiwibu = isGroup ? antiwibu.includes(from) : false
 			const isWelkom = isGroup ? welkom.includes(from) : false			 
 			const isAntijawa = isGroup ? antijawa.includes(from) : false			 
 			const isPrem = prem.includes(sender) || isOwner				
-			const btrai = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": btre, "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('lib/♡.jpeg')} } }
 			const isBotx = isGroup ? botx.includes(from) : false
-			pushname = nayla.contacts[sender] != undefined ? nayla.contacts[sender].vname || nayla.contacts[sender].notify : undefined	
-mess = {
-                zen: 'Vtnc Zen',
-				wait: `⏳Aguarde alguns instantes...⏳\n\nCaso não funcione, use o comando novamente.`,
-				waitmusic: `⏳Aguarde alguns instantes...⏳\n\nA sua música será enviada em até 2 minutos\nCaso não envie, tente especificar o nome da música.`,
-			    waitfig: `⏳Aguarde alguns instantes...⏳\n\nA criação de stickers demora alguns segundos.`,
-			    waitgif: `⏳Aguarde alguns instantes...⏳\n\nA criação de stickers demora alguns segundos\nA criação de stickergif leva de 10 segundos á 1 minuto dependendo do tamanho do gif\nLimite de 10 segundos por gif.`,
-			    waitsfw: `⏳Aguarde alguns instantes...⏳\n\nO bot irá enviar o hentai em até 2 minutos\nTente novamente caso não envie.`,
-			    waitpor: `⏳Aguarde alguns instantes...⏳\n\nO bot irá enviar a img\nTente novamente caso não envie.`,
-                waitimg: `⏳Aguarde alguns instantes...⏳\n\nO bot irá enviar criar e enviar a imagem\nO processo dura no mínimo 10 segundos\nTente novamente caso não envie.`,
-				success: '✅Sucesso✅',
-                levelon: '✅função leveis foi ativada✅',
-				leveloff: '❌função leveis foi desativada❌',
-				levelnoton: '🚫A função leveis está desativada🚫',
-				levelnol: 'Você está level 0... \njá se registrou para começar ganhar XP?',
-				erro: {
-                    ban: '🛂Você está banido🛂',
-					stick: '❌Ocorreu um erro na criação de sticker❌',
-					Iv: '❌Link inválido❌'
-				},
-				only: {
-                    zen: 'vtnc Zen',
-					group: '「 ❗ 」ESTE COMANDO SOLO SE PUEDE USAR EN GRUPOS',
-					ownerG: `O comando só pode ser usado pelo 🕴`,
-					lia: 'Só a Lia pode usar😳👌',
-					ownerB: `O comando só pode ser usado pelo🕴`,
-					admin: '「❗」ESTE COMANDO SOLO PUEDE SER USADO POR MI CREADOR.' ,
-					Badmin: '「❗」ESTE COMANDO SOLO SE PUEDE USAR CUANDO EL BOT ES ADMIN' ,
-					registrarB: `Olá ${pushname}\n\nVocê ainda não se registrou...\n\nPara se registrar e poder usar todos os comandos do bot, por favor use:\n\nComando: ${prefix}registrar seu nome|sua idade\nPor exemplo: ${prefix}registrar Italu|17`,
-					
-					}
-			}								            
+			pushname = nayla.contacts[sender] != undefined ? nayla.contacts[sender].vname || nayla.contacts[sender].notify : undefined									            
 			const isUrl = (url) => {
 			    return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))
 			}
@@ -470,9 +424,6 @@ mess = {
 			if (isCmd && isGroup) console.log('\x1b[1;31m=\x1b[1;37m>', '[\x1b[1;32mFELIXCRACK BOT3\x1b[1;37m]', time, color(command), 'De', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			if (!isCmd && isGroup) console.log('\x1b[1;31m=\x1b[1;37m>', '[\x1b[1;31mFELIXCRACK BOT4\x1b[1;37m]', time, color('Comando'), 'De', color(pushname), 'in', color(groupName), 'args :', color(args.length))
             const xxx = '```' 
-            const fakethumb = (teks, yes) => {
-            nayla.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./stik/fake.jpg'),quoted:nay,caption:yes})
-        }
 //============================
 // AUTHOR FELIXCRACK
 //============================ 
@@ -480,33 +431,30 @@ menuZ = `╭────────────────────╮
 │              🇫 🇽  🇧 🇴 🇹                                                        
 ╰────────────────────╮
 ╭────────────────────╯
-${tz}Dueño : ${ownername}
-${tz}Autor : FELIXCRACK 409
-${tz}Mes :${bulan}
-${tz}Grupo:${groupMetadata.subject}
-${tz}Prefijo Del Bot: 「 ${prefix} 」
+${tz}DUEÑO : ${ownername}
+${tz}AUTOR : FELIXCRACK 409
+${tz}MES : ${bulan}
 ╰────────────────────╮  
 ╭────────────────────╯
 ${tz}NO SPAM AL BOT
 ${tz}NO AÑADIR A GRUPOS
 ╰────────────────────╮  
 ╭────────────────────╯
-${tz}${prefix}menucreador
-${tz}${prefix}grupomenu
+${tz}${prefix}ownermenu
+${tz}${prefix}grupmenu
 ${tz}${prefix}makermenu
-${tz}${prefix}descargas
+${tz}${prefix}downloadmenu
 ${tz}${prefix}soundmenu
 ${tz}${prefix}pornmenu
 ${tz}${prefix}internalmenu
-${tz}${prefix}checkmenu
-${tz}${prefix}wallpapers
-${tz}${prefix}menuespecial
+${tz}${prefix}cekmenu
+${tz}${prefix}spesialmenu
 ${tz}${prefix}tagmenu
 ${tz}${prefix}gamemenu
 ${tz}${prefix}randomtext
 ${tz}${prefix}fastmenu
 ${tz}${prefix}islammenu
-${tz}${prefix}certificado
+${tz}${prefix}sertifikat
 ${tz}${prefix}editfoto
 ╰────❲ BY ${ownername} ❳─────`
 //============================
@@ -548,9 +496,8 @@ const info3 = `🦋 = $200
 🦇 = $2
 ${xxx}NOTE${xxx} : TETAPLAH BERBURU KAWAN. WALAUPUN TIDAK BERGUNA SEPERTI ANDA`
 
-const grupomenu = `╭──❲ 𝗙𝗫 𝗕𝗢𝗧 ❳  
-${tz}${prefix}hidetag
-
+const grupmenu = `╭──❲ ${tz}WHATSAPP${tz} ❳  
+${tz}${prefix}hideta
 ${tz}${prefix}add
 ${tz}${prefix}kick
 ${tz}${prefix}promote
@@ -572,7 +519,7 @@ ${tz}${prefix}tagall
 ${tz}${prefix}delete
 ╰──❲ BY ${ownername} ❳`
 
-const makermenu = `╭──❲ 𝗙𝗫 𝗕𝗢𝗧 ❳
+const makermenu = `╭──❲ ${tz}WHATSAPP${tz} ❳
 ${tz}${prefix}tahta
 ${tz}${prefix}neon2
 ${tz}${prefix}wall
@@ -634,336 +581,329 @@ ${tz}${prefix}video5
 ${tz}${prefix}video6
 ╰──❲ BY ${ownername} ❳`
 
-const descargas = `╭──❲ 𝗙𝗫 𝗕𝗢𝗧 ❳
-${tz}${prefix}tiktokmusic 
-${tz}${prefix}tiktoknowm 
-${tz}${prefix}igfoto 
-${tz}${prefix}igvideo 
+const downloadmenu = `╭──❲ ${tz}WHATSAPP${tz} ❳
+${tz}${prefix}telesticker
+${tz}${prefix}tiktokmusic
+${tz}${prefix}tiktoknowm
+${tz}${prefix}igfoto
+${tz}${prefix}igvideo
 ${tz}${prefix}ytsearch
 ${tz}${prefix}ytmp3
 ${tz}${prefix}ytmp4
-${tz}${prefix}play 
+${tz}${prefix}play
 ${tz}${prefix}brainly
 ╰──❲ BY ${ownername} ❳`
 
-const soundmenu = `╭──❲ 𝗙𝗫 𝗕𝗢𝗧 ❳
-${tz}${prefix}sound1
-${tz}${prefix}sound2
-${tz}${prefix}sound3
-${tz}${prefix}sound4
-${tz}${prefix}sound5
-${tz}${prefix}sound6
-${tz}${prefix}sound7
-${tz}${prefix}sound8
-${tz}${prefix}sound9
-${tz}${prefix}sound10
-${tz}${prefix}sound11
-${tz}${prefix}sound12
-${tz}${prefix}sound13
-${tz}${prefix}sound14
-${tz}${prefix}sound15
-${tz}${prefix}sound16
-${tz}${prefix}sound17
-${tz}${prefix}sound18
-${tz}${prefix}sound19
-${tz}${prefix}sound20
-${tz}${prefix}sound21
-${tz}${prefix}sound22
-${tz}${prefix}sound23
-${tz}${prefix}sound24
-${tz}${prefix}sound25
-╰──❲ BY ${ownername} ❳`
+const soundmenu = `╭──❲ ${xxx}WHATSAPP${xxx} ❳
+├${tz} ${tz} ${xxx}${prefix}sound1${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound2${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound3${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound4${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound5${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound6${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound7${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound8${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound9${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound10${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound11${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound12${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound13${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound14${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound15${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound16${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound17${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound18${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound19${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound20${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound21${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound22${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound23${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound24${xxx}
+├${tz} ${tz} ${xxx}${prefix}sound25${xxx}
+╰──❲ ${xxx}BY ${ownername}${xxx} ❳`
 
-const pornmenu = `╭──❲ 𝗙𝗫 𝗕𝗢𝗧 ❳
-${tz}${prefix}indo1 
-${tz}${prefix}indo2 
-${tz}${prefix}indo3 
-${tz}${prefix}indo4 
-${tz}${prefix}indo5 
-${tz}${prefix}indo6 
-${tz}${prefix}indo7 
-${tz}${prefix}indo8 
-${tz}${prefix}indo9 
-${tz}${prefix}indo10 
-${tz}${prefix}indo11 
-${tz}${prefix}indo12 
-${tz}${prefix}indo13 
-${tz}${prefix}indo14 
-${tz}${prefix}indo15 
-${tz}${prefix}indo16 
-${tz}${prefix}indo17 
-${tz}${prefix}indo18 
-${tz}${prefix}indo19 
-${tz}${prefix}indo20 
-${tz}${prefix}indo21 
-${tz}${prefix}indo22 
-${tz}${prefix}indo23 
-${tz}${prefix}indo24 
-${tz}${prefix}indo25
-╰──❲ BY ${ownername} ❳`
+const pornmenu = `╭──❲ ${xxx}WHATSAPP${xxx} ❳
+├${tz} ${tz} ${xxx}${prefix}indo1${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo2${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo3${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo4${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo5${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo6${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo7${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo8${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo9${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo10${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo11${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo12${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo13${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo14${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo15${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo16${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo17${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo18${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo19${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo20${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo21${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo22${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo23${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo24${xxx} 
+├${tz} ${tz} ${xxx}${prefix}indo25${xxx}
+╰──❲ ${xxx}BY ${ownername}${xxx} ❳`
 
-const internalmenu = `╭──❲ 𝗙𝗫 𝗕𝗢𝗧 ❳
-${tz}${prefix}chatlist
-${tz}${prefix}addsticker
-${tz}${prefix}addvn
-${tz}${prefix}getvn
-${tz}${prefix}getsticker
-${tz}${prefix}liststicker
-${tz}${prefix}listvn
-${tz}${prefix}addimage
-${tz}${prefix}getimage
-${tz}${prefix}imagelist
-${tz}${prefix}addvideo
-${tz}${prefix}getvideo
-${tz}${prefix}listvideo
-╰──❲ BY ${ownername} ❳`
+const internalmenu = `╭──❲ ${xxx}WHATSAPP${xxx} ❳
+├${tz} ${tz} ${xxx}${prefix}chatlist${xxx}
+├${tz} ${tz} ${xxx}${prefix}addsticker${xxx}
+├${tz} ${tz} ${xxx}${prefix}addvn${xxx}
+├${tz} ${tz} ${xxx}${prefix}getvn${xxx}
+├${tz} ${tz} ${xxx}${prefix}getsticker${xxx}
+├${tz} ${tz} ${xxx}${prefix}liststicker${xxx}
+├${tz} ${tz} ${xxx}${prefix}listvn${xxx}
+├${tz} ${tz} ${xxx}${prefix}addimage${xxx}
+├${tz} ${tz} ${xxx}${prefix}getimage${xxx}
+├${tz} ${tz} ${xxx}${prefix}imagelist${xxx}
+├${tz} ${tz} ${xxx}${prefix}addvideo${xxx}
+├${tz} ${tz} ${xxx}${prefix}getvideo${xxx}
+├${tz} ${tz} ${xxx}${prefix}listvideo${xxx}
+╰──❲ ${xxx}BY ${ownername}${xxx} ❳`
 
-const wallpapers = `╭──❲ 𝗙𝗫 𝗕𝗢𝗧 ❳
-${tz}${prefix}cyberspace
-${tz}${prefix}tecnologia
-${tz}${prefix}hacker
-${tz}${prefix}muslin
-${tz}${prefix}montañas
-╰──❲ BY ${ownername} ❳`
+const cekmenu = `╭──❲ ${xxx}WHATSAPP${xxx} ❳
+├${tz} ${tz} ${xxx}${prefix}gantengcek${xxx}
+├${tz} ${tz} ${xxx}${prefix}cantikcek${xxx}
+├${tz} ${tz} ${xxx}${prefix}jelekcek${xxx}
+├${tz} ${tz} ${xxx}${prefix}goblokcek${xxx}
+├${tz} ${tz} ${xxx}${prefix}begocek${xxx}
+├${tz} ${tz} ${xxx}${prefix}pintercek${xxx}
+├${tz} ${tz} ${xxx}${prefix}jagocek${xxx}
+├${tz} ${tz} ${xxx}${prefix}nolepcek${xxx}
+├${tz} ${tz} ${xxx}${prefix}babicek${xxx}
+├${tz} ${tz} ${xxx}${prefix}bebancek${xxx}
+├${tz} ${tz} ${xxx}${prefix}baikcek${xxx}
+├${tz} ${tz} ${xxx}${prefix}jahatcek${xxx}
+├${tz} ${tz} ${xxx}${prefix}anjingcek${xxx}
+├${tz} ${tz} ${xxx}${prefix}haramcek${xxx}
+├${tz} ${tz} ${xxx}${prefix}kontolcek${xxx}
+├${tz} ${tz} ${xxx}${prefix}pakboycek${xxx}
+├${tz} ${tz} ${xxx}${prefix}pakgirlcek${xxx}
+├${tz} ${tz} ${xxx}${prefix}sangecek${xxx}
+├${tz} ${tz} ${xxx}${prefix}bapercek${xxx}
+╰──❲ ${xxx}BY ${ownername}${xxx} ❳`
 
-const checkmenu = `╭──❲ 𝗙𝗫 𝗕𝗢𝗧 ❳
-${tz}${prefix}randomship
-${tz}${prefix}gayme
-${tz}${prefix}gay
-${tz}${prefix}goblokcek
-${tz}${prefix}begocek
-${tz}${prefix}pintercek
-${tz}${prefix}jagocek
-${tz}${prefix}nolepcek
-${tz}${prefix}babicek
-${tz}${prefix}bebancek
-${tz}${prefix}baikcek
-${tz}${prefix}jahatcek
-${tz}${prefix}anjingcek
-${tz}${prefix}haramcek
-${tz}${prefix}kontolcek
-${tz}${prefix}pakboycek
-${tz}${prefix}pakgirlcek
-${tz}${prefix}sangecek
-${tz}${prefix}bapercek
-╰──❲ BY ${ownername} ❳`
+const tagmenu = `╭──❲ ${xxx}WHATSAPP${xxx} ❳
+├${tz} ${tz} ${xxx}${prefix}ganteng${xxx}
+├${tz} ${tz} ${xxx}${prefix}cantik${xxx}
+├${tz} ${tz} ${xxx}${prefix}jelek${xxx}
+├${tz} ${tz} ${xxx}${prefix}goblok${xxx}
+├${tz} ${tz} ${xxx}${prefix}bego${xxx}
+├${tz} ${tz} ${xxx}${prefix}pinter${xxx}
+├${tz} ${tz} ${xxx}${prefix}jago${xxx}
+├${tz} ${tz} ${xxx}${prefix}babi${xxx}
+├${tz} ${tz} ${xxx}${prefix}beban${xxx}
+├${tz} ${tz} ${xxx}${prefix}baik${xxx}
+├${tz} ${tz} ${xxx}${prefix}jahat${xxx}
+├${tz} ${tz} ${xxx}${prefix}anjing${xxx}
+├${tz} ${tz} ${xxx}${prefix}monyet${xxx}
+├${tz} ${tz} ${xxx}${prefix}haram${xxx}
+├${tz} ${tz} ${xxx}${prefix}kontol${xxx}
+├${tz} ${tz} ${xxx}${prefix}pakboy${xxx}
+├${tz} ${tz} ${xxx}${prefix}pakgirl${xxx}
+├${tz} ${tz} ${xxx}${prefix}sadboy${xxx}
+├${tz} ${tz} ${xxx}${prefix}sadgirl${xxx}
+├${tz} ${tz} ${xxx}${prefix}wibu${xxx}
+├${tz} ${tz} ${xxx}${prefix}nolep${xxx}
+├${tz} ${tz} ${xxx}${prefix}hebat${xxx}
+╰──❲ ${xxx}BY ${ownername}${xxx} ❳`
 
-const tagmenu = `╭──❲ 𝗙𝗫 𝗕𝗢𝗧 ❳
-${tz}${prefix}ganteng
-${tz}${prefix}cantik
-${tz}${prefix}jelek
-${tz}${prefix}goblok
-${tz}${prefix}bego
-${tz}${prefix}pinter
-${tz}${prefix}jago
-${tz}${prefix}babi
-${tz}${prefix}beban
-${tz}${prefix}baik
-${tz}${prefix}jahat
-${tz}${prefix}anjing
-${tz}${prefix}monyet
-${tz}${prefix}haram
-${tz}${prefix}kontol
-${tz}${prefix}pakboy
-${tz}${prefix}pakgirl
-${tz}${prefix}sadboy
-${tz}${prefix}sadgirl
-${tz}${prefix}wibu
-${tz}${prefix}nolep
-${tz}${prefix}hebat
-╰──❲ BY ${ownername} ❳`
+const gamemenu = `╭──❲ ${xxx}WHATSAPP${xxx} ❳
+├${tz} ${tz} ${xxx}${prefix}slot${xxx}
+├${tz} ${tz} ${xxx}${prefix}simi${xxx}
+├${tz} ${tz} ${xxx}${prefix}jumlah${xxx}
+├${tz} ${tz} ${xxx}${prefix}reverse${xxx}
+├${tz} ${tz} ${xxx}${prefix}tebakgambar${xxx}
+├${tz} ${tz} ${xxx}${prefix}nickff${xxx}
+├${tz} ${tz} ${xxx}${prefix}kapankah${xxx}
+├${tz} ${tz} ${xxx}${prefix}apakah${xxx}
+├${tz} ${tz} ${xxx}${prefix}ramalnomer${xxx} 
+├${tz} ${tz} ${xxx}${prefix}ramalcinta${xxx} 
+├${tz} ${tz} ${xxx}${prefix}jodohbali${xxx} 
+├${tz} ${tz} ${xxx}${prefix}ramalnikah${xxx} 
+├${tz} ${tz} ${xxx}${prefix}taksirmimpi${xxx} 
+├${tz} ${tz} ${xxx}${prefix}suit${xxx}                   
+├${tz} ${tz} ${xxx}${prefix}boomtext${xxx}
+├${tz} ${tz} ${xxx}${prefix}holoh${xxx}
+├${tz} ${tz} ${xxx}${prefix}heleh${xxx}
+├${tz} ${tz} ${xxx}${prefix}huluh${xxx}
+├${tz} ${tz} ${xxx}${prefix}hilih${xxx}
+├${tz} ${tz} ${xxx}${prefix}halah${xxx} 
+├${tz} ${tz} ${xxx}${prefix}kapital${xxx}
+├${tz} ${tz} ${xxx}${prefix}textfont${xxx}
+├${tz} ${tz} ${xxx}${prefix}tebak${xxx}
+├${tz} ${tz} ${xxx}${prefix}oxo${xxx}
+├${tz} ${tz} ${xxx}${prefix}pesan${xxx}
+├${tz} ${tz} ${xxx}${prefix}tebakkimia${xxx}
+├${tz} ${tz} ${xxx}${prefix}tebaklirik${xxx}
+├${tz} ${tz} ${xxx}${prefix}tebakin1${xxx}
+├${tz} ${tz} ${xxx}${prefix}tebakin2${xxx}
+╰──❲ ${xxx}BY ${ownername}${xxx} ❳`
 
-const gamemenu = `╭──❲ 𝗙𝗫 𝗕𝗢𝗧 ❳
-${tz}${prefix}slot
-${tz}${prefix}simi
-${tz}${prefix}jumlah
-${tz}${prefix}reverse
-${tz}${prefix}tebakgambar
-${tz}${prefix}nickff
-${tz}${prefix}kapankah
-${tz}${prefix}apakah
-${tz}${prefix}ramalnomer 
-${tz}${prefix}ramalcinta 
-${tz}${prefix}jodohbali 
-${tz}${prefix}ramalnikah 
-${tz}${prefix}taksirmimpi 
-${tz}${prefix}suit                   
-${tz}${prefix}boomtext
-${tz}${prefix}holoh
-${tz}${prefix}heleh
-${tz}${prefix}huluh
-${tz}${prefix}hilih
-${tz}${prefix}halah 
-${tz}${prefix}kapital
-${tz}${prefix}textfont
-${tz}${prefix}tebak
-${tz}${prefix}oxo
-${tz}${prefix}pesan
-${tz}${prefix}tebakkimia
-${tz}${prefix}tebaklirik
-${tz}${prefix}tebakin1
-${tz}${prefix}tebakin2
-╰──❲ BY ${ownername} ❳`
+const randomtext = `╭──❲ ${xxx}WHATSAPP${xxx} ❳
+├${tz} ${tz} ${xxx}${prefix}quotes2${xxx}
+├${tz} ${tz} ${xxx}${prefix}quotes1${xxx}
+├${tz} ${tz} ${xxx}${prefix}kusonime${xxx}
+├${tz} ${tz} ${xxx}${prefix}renungan${xxx}
+├${tz} ${tz} ${xxx}${prefix}samehadaku${xxx}
+├${tz} ${tz} ${xxx}${prefix}infonomer${xxx}
+├${tz} ${tz} ${xxx}${prefix}jadwaltv${xxx}
+├${tz} ${tz} ${xxx}${prefix}tvjadwal${xxx}
+├${tz} ${tz} ${xxx}${prefix}fml${xxx}
+├${tz} ${tz} ${xxx}${prefix}cinta${xxx}
+├${tz} ${tz} ${xxx}${prefix}resepmasakan${xxx}
+├${tz} ${tz} ${xxx}${prefix}cersex${xxx}
+├${tz} ${tz} ${xxx}${prefix}cerpen${xxx}
+├${tz} ${tz} ${xxx}${prefix}jadwalsholat${xxx}
+├${tz} ${tz} ${xxx}${prefix}pantun${xxx}
+├${tz} ${tz} ${xxx}${prefix}cuaca${xxx}
+├${tz} ${tz} ${xxx}${prefix}namaninja${xxx}
+├${tz} ${tz} ${xxx}${prefix}fake${xxx}
+├${tz} ${tz} ${xxx}${prefix}spamcall${xxx}
+├${tz} ${tz} ${xxx}${prefix}spamemail${xxx}
+├${tz} ${tz} ${xxx}${prefix}quotes${xxx}
+├${tz} ${tz} ${xxx}${prefix}quotesnime${xxx}
+├${tz} ${tz} ${xxx}${prefix}kbbilazimedia${xxx}
+├${tz} ${tz} ${xxx}${prefix}covid${xxx}
+├${tz} ${tz} ${xxx}${prefix}wikiid${xxx}
+├${tz} ${tz} ${xxx}${prefix}wikien${xxx}
+├${tz} ${tz} ${xxx}${prefix}covidid${xxx}
+├${tz} ${tz} ${xxx}${prefix}kbbi${xxx}
+├${tz} ${tz} ${xxx}${prefix}infogempa${xxx}
+├${tz} ${tz} ${xxx}${prefix}randomquran${xxx}
+├${tz} ${tz} ${xxx}${prefix}kisanabi${xxx}
+├${tz} ${tz} ${xxx}${prefix}artinama${xxx}
+├${tz} ${tz} ${xxx}${prefix}artimimpi${xxx}
+├${tz} ${tz} ${xxx}${prefix}artijadian${xxx}
+├${tz} ${tz} ${xxx}${prefix}chord${xxx}
+├${tz} ${tz} ${xxx}${prefix}lirik${xxx}
+╰──❲ ${xxx}BY ${ownername}${xxx} ❳`
 
-const randomtext = `╭──❲ 𝗙𝗫 𝗕𝗢𝗧 ❳
-${tz}${prefix}quotes2
-${tz}${prefix}quotes1
-${tz}${prefix}kusonime
-${tz}${prefix}renungan
-${tz}${prefix}samehadaku
-${tz}${prefix}infonomer
-${tz}${prefix}jadwaltv
-${tz}${prefix}tvjadwal
-${tz}${prefix}fml
-${tz}${prefix}cinta
-${tz}${prefix}resepmasakan
-${tz}${prefix}cersex
-${tz}${prefix}cerpen
-${tz}${prefix}jadwalsholat
-${tz}${prefix}pantun
-${tz}${prefix}cuaca
-${tz}${prefix}namaninja
-${tz}${prefix}fake
-${tz}${prefix}spamcall
-${tz}${prefix}spamemail
-${tz}${prefix}quotes
-${tz}${prefix}quotesnime
-${tz}${prefix}kbbilazimedia
-${tz}${prefix}covid
-${tz}${prefix}wikiid
-${tz}${prefix}wikien
-${tz}${prefix}covidid
-${tz}${prefix}kbbi
-${tz}${prefix}infogempa
-${tz}${prefix}randomquran
-${tz}${prefix}kisanabi
-${tz}${prefix}artinama
-${tz}${prefix}artimimpi
-${tz}${prefix}artijadian
-${tz}${prefix}chord
-${tz}${prefix}lirik
-╰──❲ BY ${ownername} ❳`
+const fastmenu = `╭──❲ ${xxx}WHATSAPP${xxx} ❳
+├${tz} ${tz} ${xxx}${prefix}fb${xxx}
+├${tz} ${tz} ${xxx}${prefix}tts${xxx}
+├${tz} ${tz} ${xxx}${prefix}steam${xxx}
+├${tz} ${tz} ${xxx}${prefix}stalktwit${xxx}
+├${tz} ${tz} ${xxx}${prefix}stalkgithub${xxx} 
+├${tz} ${tz} ${xxx}${prefix}randomhusbu${xxx}
+├${tz} ${tz} ${xxx}${prefix}pinterest${xxx}
+├${tz} ${tz} ${xxx}${prefix}randomwaifu${xxx}
+├${tz} ${tz} ${xxx}${prefix}randomwaifu1${xxx}
+├${tz} ${tz} ${xxx}${prefix}stalkig${xxx}
+├${tz} ${tz} ${xxx}${prefix}estetikpic${xxx}
+├${tz} ${tz} ${xxx}${prefix}memeindo${xxx}
+├${tz} ${tz} ${xxx}${prefix}darkjokes${xxx}
+├${tz} ${tz} ${xxx}${prefix}urlshort${xxx}
+├${tz} ${tz} ${xxx}${prefix}shortener${xxx}
+├${tz} ${tz} ${xxx}${prefix}fox${xxx}
+├${tz} ${tz} ${xxx}${prefix}dog${xxx}
+├${tz} ${tz} ${xxx}${prefix}cat${xxx}
+├${tz} ${tz} ${xxx}${prefix}panda${xxx}
+├${tz} ${tz} ${xxx}${prefix}panda1${xxx}
+├${tz} ${tz} ${xxx}${prefix}bird${xxx}
+├${tz} ${tz} ${xxx}${prefix}koala${xxx}
+├${tz} ${tz} ${xxx}${prefix}meme${xxx}  
+├${tz} ${tz} ${xxx}${prefix}asupan${xxx}
+├${tz} ${tz} ${xxx}${prefix}asupan1${xxx}
+├${tz} ${tz} ${xxx}${prefix}asupan2${xxx}
+├${tz} ${tz} ${xxx}${prefix}ngakak${xxx}
+├${tz} ${tz} ${xxx}${prefix}pin${xxx} 
+├${tz} ${tz} ${xxx}${prefix}foto${xxx} 
+├${tz} ${tz} ${xxx}${prefix}bts${xxx}
+├${tz} ${tz} ${xxx}${prefix}exo${xxx}
+├${tz} ${tz} ${xxx}${prefix}blackpink${xxx}
+├${tz} ${tz} ${xxx}${prefix}attp${xxx}
+├${tz} ${tz} ${xxx}${prefix}manga1${xxx}
+├${tz} ${tz} ${xxx}${prefix}character${xxx}
+├${tz} ${tz} ${xxx}${prefix}ttp4${xxx}
+├${tz} ${tz} ${xxx}${prefix}ttp3${xxx}
+├${tz} ${tz} ${xxx}${prefix}ttp2${xxx}
+├${tz} ${tz} ${xxx}${prefix}ttp1${xxx}
+├${tz} ${tz} ${xxx}${prefix}sticker${xxx}
+├${tz} ${tz} ${xxx}${prefix}stickergif${xxx}
+├${tz} ${tz} ${xxx}${prefix}bug${xxx}
+╰──❲ ${xxx}BY ${ownername}${xxx} ❳`
 
-const fastmenu = `╭──❲ 𝗙𝗫 𝗕𝗢𝗧 ❳
-${tz}${prefix}fb
-${tz}${prefix}tts
-${tz}${prefix}steam
-${tz}${prefix}stalktwit
-${tz}${prefix}stalkgithub 
-${tz}${prefix}randomhusbu
-${tz}${prefix}pinterest
-${tz}${prefix}randomwaifu
-${tz}${prefix}randomwaifu1
-${tz}${prefix}stalkig
-${tz}${prefix}estetikpic
-${tz}${prefix}memeindo
-${tz}${prefix}darkjokes
-${tz}${prefix}urlshort
-${tz}${prefix}shortener
-${tz}${prefix}fox
-${tz}${prefix}dog
-${tz}${prefix}cat
-${tz}${prefix}panda
-${tz}${prefix}panda1
-${tz}${prefix}bird
-${tz}${prefix}koala
-${tz}${prefix}meme  
-${tz}${prefix}asupan
-${tz}${prefix}asupan1
-${tz}${prefix}asupan2
-${tz}${prefix}ngakak
-${tz}${prefix}pin 
-${tz}${prefix}foto 
-${tz}${prefix}bts
-${tz}${prefix}exo
-${tz}${prefix}blackpink
-${tz}${prefix}attp
-${tz}${prefix}manga1
-${tz}${prefix}character
-${tz}${prefix}ttp4
-${tz}${prefix}ttp3
-${tz}${prefix}ttp2
-${tz}${prefix}ttp1
-${tz}${prefix}sticker
-${tz}${prefix}stickergif
-${tz}${prefix}bug
-╰──❲ BY ${ownername} ❳`
+const sertifikat = `╭──❲ ${xxx}WHATSAPP${xxx} ❳
+├${tz} ${tz} ${xxx}${prefix}ffserti${xxx} 
+├${tz} ${tz} ${xxx}${prefix}ffserti2${xxx}
+├${tz} ${tz} ${xxx}${prefix}ffserti3${xxx}
+├${tz} ${tz} ${xxx}${prefix}ffserti4${xxx}
+├${tz} ${tz} ${xxx}${prefix}ffserti5${xxx}
+├${tz} ${tz} ${xxx}${prefix}pubgserti${xxx}
+├${tz} ${tz} ${xxx}${prefix}pubgserti2${xxx}
+├${tz} ${tz} ${xxx}${prefix}pubgserti3${xxx}
+├${tz} ${tz} ${xxx}${prefix}pubgserti4${xxx}
+├${tz} ${tz} ${xxx}${prefix}pubgserti5${xxx}
+├${tz} ${tz} ${xxx}${prefix}mlserti${xxx}
+├${tz} ${tz} ${xxx}${prefix}mlserti2${xxx}
+├${tz} ${tz} ${xxx}${prefix}mlserti3${xxx}
+├${tz} ${tz} ${xxx}${prefix}mlserti4${xxx}
+├${tz} ${tz} ${xxx}${prefix}mlserti5${xxx}
+╰──❲ ${xxx}BY ${ownername}${xxx} ❳`
 
-const certificado = `╭──❲ 𝗙𝗫 𝗕𝗢𝗧 ❳
-${tz}${prefix}ffserti 
-${tz}${prefix}ffserti2
-${tz}${prefix}ffserti3
-${tz}${prefix}ffserti4
-${tz}${prefix}ffserti5
-${tz}${prefix}pubgserti
-${tz}${prefix}pubgserti2
-${tz}${prefix}pubgserti3
-${tz}${prefix}pubgserti4
-${tz}${prefix}pubgserti5
-${tz}${prefix}mlserti
-${tz}${prefix}mlserti2
-${tz}${prefix}mlserti3
-${tz}${prefix}mlserti4
-${tz}${prefix}mlserti5
-╰──❲ BY ${ownername} ❳`
+const ownermenu = `╭──❲ ${xxx}WHATSAPP${xxx} ❳
+├${tz} ${tz} ${xxx}${prefix}dellprem${xxx} 
+├${tz} ${tz} ${xxx}${prefix}addprem${xxx}
+├${tz} ${tz} ${xxx}${prefix}clearall${xxx}
+├${tz} ${tz} ${xxx}${prefix}bc${xxx}
+├${tz} ${tz} ${xxx}${prefix}owner${xxx}
+├${tz} ${tz} ${xxx}${prefix}author${xxx}
+├${tz} ${tz} ${xxx}${prefix}bugtroli${xxx}
+├${tz} ${tz} ${xxx}${prefix}setout${xxx}
+├${tz} ${tz} ${xxx}${prefix}setwelcome${xxx}
+├${tz} ${tz} ${xxx}${prefix}settz${xxx}
+├${tz} ${tz} ${xxx}${prefix}setthum${xxx}
+├${tz} ${tz} ${xxx}${prefix}setpp${xxx}
+├${tz} ${tz} ${xxx}${prefix}setprefix${xxx}
+├${tz} ${tz} ${xxx}${prefix}setreply${xxx}
+╰──❲ ${xxx}BY ${ownername}${xxx} ❳`
 
-const menucreador = `╭──❲ 𝗙𝗫 𝗕𝗢𝗧 ❳
-${tz}${prefix}dellprem 
-${tz}${prefix}addprem
-${tz}${prefix}clearall
-${tz}${prefix}bc
-${tz}${prefix}owner
-${tz}${prefix}author
-${tz}${prefix}bugtroli
-${tz}${prefix}setout
-${tz}${prefix}setwelcome
-${tz}${prefix}settz
-${tz}${prefix}setthum
-${tz}${prefix}setpp
-${tz}${prefix}setprefix
-${tz}${prefix}setreply
-╰──❲ BY ${ownername} ❳`
+const editfoto = `╭──❲ ${xxx}WHATSAPP${xxx} ❳
+├${tz} ${tz} ${xxx}${prefix}crossgun${xxx} 
+├${tz} ${tz} ${xxx}${prefix}bakar${xxx}
+├${tz} ${tz} ${xxx}${prefix}pensil${xxx}
+├${tz} ${tz} ${xxx}${prefix}pantaimalam${xxx}
+├${tz} ${tz} ${xxx}${prefix}costumwp${xxx}
+├${tz} ${tz} ${xxx}${prefix}facebookpage${xxx}
+├${tz} ${tz} ${xxx}${prefix}gtav${xxx}
+├${tz} ${tz} ${xxx}${prefix}deteksiumur${xxx}
+├${tz} ${tz} ${xxx}${prefix}removebg${xxx}
+├${tz} ${tz} ${xxx}${prefix}deteksiwajah${xxx}
+├${tz} ${tz} ${xxx}${prefix}wanted${xxx}
+╰──❲ ${xxx}BY ${ownername}${xxx} ❳`
 
-const editfoto = `╭──❲ 𝗙𝗫 𝗕𝗢𝗧 ❳
-${tz}${prefix}pistolacruzada 
-${tz}${prefix}quemar
-${tz}${prefix}lapiz
-${tz}${prefix}playadenoche
-${tz}${prefix}disfraz
-${tz}${prefix}facebookpage
-${tz}${prefix}gtav
-${tz}${prefix}detecciondeedad
-${tz}${prefix}removebg
-${tz}${prefix}deteccionderostro
-${tz}${prefix}wanted
-╰──❲ BY ${ownername} ❳`
+const islammenu = `╭──❲ ${xxx}WHATSAPP${xxx} ❳
+├${tz} ${tz} ${xxx}${prefix}asmaulhusna${xxx} 
+├${tz} ${tz} ${xxx}${prefix}ayatkursi${xxx}
+├${tz} ${tz} ${xxx}${prefix}bacaansholat${xxx}
+├${tz} ${tz} ${xxx}${prefix}doaharian${xxx}
+├${tz} ${tz} ${xxx}${prefix}kisahnabi${xxx}
+├${tz} ${tz} ${xxx}${prefix}niatsholat${xxx}
+├${tz} ${tz} ${xxx}${prefix}tahlil${xxx}
+├${tz} ${tz} ${xxx}${prefix}wirid${xxx}
+╰──❲ ${xxx}BY ${ownername}${xxx} ❳`
 
-const islammenu = `╭──❲ 𝗙𝗫 𝗕𝗢𝗧 ❳
-${tz}${prefix}asmaulhusna 
-${tz}${prefix}ayatkursi
-${tz}${prefix}bacaansholat
-${tz}${prefix}doaharian
-${tz}${prefix}kisahnabi
-${tz}${prefix}niatsholat
-${tz}${prefix}tahlil
-${tz}${prefix}wirid
-╰──❲ BY ${ownername} ❳`
-
-const menuespecial = `╭──❲ 𝗙𝗫 𝗕𝗢𝗧 ❳
-${tz}${prefix}randomwibu
-${tz}${prefix}phkomen
-${tz}${prefix}semoji
-${tz}${prefix}jadian
-${tz}${prefix}citacita
-${tz}${prefix}laut
-${tz}${prefix}darat
-${tz}${prefix}udara
-${tz}${prefix}fakta
-${tz}${prefix}gcard
-${tz}${prefix}ssweb
-${tz}${prefix}katailham
-${tz}${prefix}randomwibu
-╰──❲ BY ${ownername} ❳`
+const spesialmenu = `╭──❲ ${xxx}WHATSAPP${xxx} ❳
+├${tz} ${tz} ${xxx}${prefix}randomwibu${xxx}
+├${tz} ${tz} ${xxx}${prefix}phkomen${xxx}
+├${tz} ${tz} ${xxx}${prefix}semoji${xxx}
+├${tz} ${tz} ${xxx}${prefix}jadian${xxx}
+├${tz} ${tz} ${xxx}${prefix}citacita${xxx}
+├${tz} ${tz} ${xxx}${prefix}laut${xxx}
+├${tz} ${tz} ${xxx}${prefix}darat${xxx}
+├${tz} ${tz} ${xxx}${prefix}udara${xxx}
+├${tz} ${tz} ${xxx}${prefix}fakta${xxx}
+├${tz} ${tz} ${xxx}${prefix}gcard${xxx}
+├${tz} ${tz} ${xxx}${prefix}ssweb${xxx}
+├${tz} ${tz} ${xxx}${prefix}katailham${xxx}
+├${tz} ${tz} ${xxx}${prefix}randomwibu${xxx}
+╰──❲ ${xxx}BY ${ownername}${xxx} ❳`
 
 const prem1 = `MAAF TAPI FITUR ${xxx}${command}${xxx} KHUSUS MEMBER PREMIUM. INGIN DAFTAR PREMIUM?? SILAHKAN HUBUNGI OWNER`
     
@@ -1006,348 +946,6 @@ const elitenay = `╭═══════════════════�
 			        
 			        
 //		 NUEVAS FUNCIONES***/
-
-case 'jacksitogay':  
-                   if (!isElite) return reply(nayzelite)		
-                   if (args.length < 1) return reply(`[❗] Ejemplo??\n*${prefix}${command} Felixcrack*`)
-                   reply(naylachan)
-                   F = body.slice(6)				    
-                   anu = await getBuffer(`https://alpin-api-2021.herokuapp.com/api/textmaker/alam?text=${F}&theme=summer&apikey=alpin1`)
-                   nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay})
-                   break 
-                   
-                   
-                
-case 'infogrupo':  
-                      
-                    perfilg = await nayla.getProfilePicture(from)
-                    enlacegc = await nayla.groupInviteCode (from)
-                    if (!isElite) return reply(nayzelite)	
-		  	  	nayla.updatePresence(from, Presence.composing)
-			    	var itsme = `0@s.whatsapp.net`
-			    	var split = `Grupo ${groupName}`
-		     	   var selepbot =         {
-					contextInfo:   { participant: itsme, quotedMessage: { extendedTextMessage: { text: split,	}}}}
-		        	teks = `┏━━━━━━━━━━━━━━━━━\n`
-		            teks += `┠⊷️Grupo: \n`
-	                teks += `┠⊷️${groupName}\n`
-		            teks += `┗━━━━━━━━━━━━━━━━━\n`
-		            teks += `┏━━━━━━━━━━━━━━━━━\n`
-		            teks += `┠⊷️Miembros: ${groupMembers.length}\n`
-		            teks += `┗━━━━━━━━━━━━━━━━━\n`
-		            teks += `┏━━━━━━━━━━━━━━━━━\n`
-		            teks += `┠⊷️Admins: ${groupAdmins.length} \n`
-		            teks += `┗━━━━━━━━━━━━━━━━━\n`
-		            teks += `┏━━━━━━━━━━━━━━━━━\n`
-		            teks += `┠⊷️Usuarios Online: \n`
-		            teks += `┗━━━━━━━━━━━━━━━━━\n`
-		            teks += `┏━━━━━━━━━━━━━━━━━\n`
-		            teks += `┠⊷️Desc: ${groupMetadata.desc}\n`
-		            teks += `┗━━━━━━━━━━━━━━━━━\n`
-		            teks += `┏━━━━━━━━━━━━━━━━━\n`
-		            teks += `┠⊷️Link: https://chat.whatsapp.com/${enlacegc}\n`
-		            teks += `┗━━━━━━━━━━━━━━━━━\n`
-			    	nayla.sendMessage(from, teks, MessageType.text, selepbot)
-		    		break
-case 'in':  
-                    if (!isElite) return reply(nayzelite)	
-		  	  	nayla.updatePresence(from, Presence.composing)
-			    	var itsme = `0@s.whatsapp.net`
-			    	var split = `Info:`
-		     	   var selepbot =         {
-					contextInfo:   { participant: itsme, quotedMessage: { extendedTextMessage: { text: split,	}}}}
-		        	teks = `Weeey Ayiuda No Soy Un Bot Me Tienen Secuestrado:(\n`
-			    	nayla.sendMessage(from, teks, MessageType.text, selepbot)
-		    		break
-case 'letra':    
-           
-                		reply(naylachan)
-					teks = body.slice(7)
-					anu = await fetchJson(`http://scrap.terhambar.com/lirik?word=${teks}`, {method: 'get'})
-					reply('Letra de la canción '+teks+' es :\n\n'+anu.result.lirik)
-					
-					break 
-case 'ytsearch':
-reply(naylachan)
-					if (args.length < 1) return reply('Tolong masukan query!')
-					var srch = args.join('');
-					try {
-		        	var aramas = await yts(srch);
-		   			} catch {
-		        	return await nayla.sendMessage(from, 'Error!', MessageType.text, dload)
-		    		}
-		    		aramat = aramas.all 
-		    		var tbuff = await getBuffer(aramat[0].image)
-		    		var ytresult = '';
-		    		ytresult += '「 *YOUTUBE SEARCH* 」'
-		    		ytresult += '\n________________________\n\n'
-		   			aramas.all.map((video) => {
-		        	ytresult += '❏ Título: ' + video.title + '\n'
-		            ytresult += '❏ Link: ' + video.url + '\n'
-		            ytresult += '❏ Duración: ' + video.timestamp + '\n'
-		            ytresult += '❏ Subida: ' + video.ago + '\n________________________\n\n'
-		    		});
-		    		ytresult += '────✪ FX ┃ ᴮᴼᵀ ✪────'
-		    		await fakethumb(tbuff,ytresult)
-					break
-case 'play':
-					if (args.length === 0) return reply(`Kirim perintah *${prefix}play* _Judul lagu yang akan dicari_`)
-		            var srch = args.join('')
-		    		aramas = await yts(srch);
-		    		aramat = aramas.all 
-		   			var mulaikah = aramat[0].url							
-		                  try {
-		                    yta(mulaikah)
-		                    .then((res) => {
-		                        const { dl_link, thumb, title, filesizeF, filesize } = res
-		                        axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
-		                        .then(async (a) => {
-		                        if (Number(filesize) >= 100000) return sendMediaURL(from, thumb, `*PLAY MUSIC*\n\n*Title* : ${title}\n*Ext* : MP3\n*Filesize* : ${filesizeF}\n*Link* : ${a.data}\n\n_Untuk durasi lebih dari batas disajikan dalam mektuk link_`)
-		                        const captions = `*PLAY MUSIC*\n\n*Title* : ${title}\n*Ext* : MP3\n*Size* : ${filesizeF}\n*Link* : ${a.data}\n\n_Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
-		                        sendMediaURL(from, thumb, captions)
-		                        await sendMediaURL(from, dl_link).catch(() => reply('error'))
-		                        })                
-		                        })
-		                        } catch (err) {
-		                        reply('Error')
-		                        }
-		                   break    
-case 'int':
-if (args.length < 1) return reply(`Use ${prefix}simi texto`)
-try { 
-anu = await fetchJson(`https://simsumi.herokuapp.com/api?text=${encodeURIComponent(body.slice(5))}`, {method: 'get'})
-if (anu.error) return reply('Não sei ler o que não existe 🐤 (converse cmg)')
-nayla.sendMessage(from, `${anu.success} 🐤`, text, {quoted: mek})
-} catch {
-reply(ptbr.erro)
-}
-break
-
-case 'reiniciar':
-if (!isOwner) return reply(mess.only.ownerB)
-                   npm = `npm start`
-                   reply('Reiniciando en unos segundos...')       
-	               exec(npm, (err, stdout) => {
-		           if(err) return nayla.sendMessage(from, "Comando inexistente", text, {quoted: mek})
-
-		           if (stdout) {
-			       nayla.sendMessage(from, stdout, text, {quoted: mek})
-} 
-                   })
-                  break
-case 'update':
-if (!isOwner) return reply(mess.only.ownerB)
-                   npm = `npm start`
-                   reply('Me Estoy Actualizando, ESPERA...')       
-	               exec(npm, (err, stdout) => {
-		           if(err) return nayla.sendMessage(from, "Comando inexistente", text, {quoted: mek})
-
-		           if (stdout) {
-			       nayla.sendMessage(from, stdout, text, {quoted: nay})
-} 
-                   })
-                  break
-case 'tagall2':
-                case 'marcar2':
-				nayla.updatePresence(from, Presence.composing) 
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					members_id = []
-					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += `  Total : ${groupMembers.length}\n`
-					for (let mem of groupMembers) {
-						teks += `༆ ${mem.jid.split('@')[0]}\n`
-						members_id.push(mem.jid)
-					}
-					nayla.sendMessage(from, '𝙈𝙚𝙣𝙘𝙞𝙤𝙣 𝘿𝙚 𝙏𝙤𝙙𝙤𝙨'+teks+'â• âž¥', text, {quoted: nay})
-					break
-                case 'tagall3':
-                case 'marcar3':
-				nayla.updatePresence(from, Presence.composing) 
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					members_id = []
-					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += `  Total : ${groupMembers.length}\n`
-					for (let mem of groupMembers) {
-						teks += ` https://wa.me/${mem.jid.split('@')[0]}\n`
-						members_id.push(mem.jid)
-					}
-					nayla.sendMessage(from, '𝙼𝙴𝙽𝙲𝙸𝙾𝙽 𝙳𝙴 𝚃𝙾𝙳𝙾𝚂'+teks+'', text, {detectLinks: false, quoted: nay})
-					break
-                        case 'tagall4':
-                        case 'marcar4':
-				nayla.updatePresence(from, Presence.composing) 
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					members_id = []
-					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += `  Total : ${groupMembers.length}\n`
-					for (let mem of groupMembers) {
-						teks += `༄ ${mem.jid.split('@')[0]}@c.us\n`
-						members_id.push(mem.jid)
-					}
-					nayla.sendMessage(from, '𝙈𝙚𝙣𝙘𝙞𝙤𝙣 𝘿𝙚 𝙏𝙤𝙙𝙤𝙨'+teks+'✔︎', text, {quoted: nay})
-					break
-                case 'tagall5':
-                case 'marcar5':
-				nayla.updatePresence(from, Presence.composing) 
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					members_id = []
-					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += `  Total : ${groupMembers.length}\n`
-					for (let mem of groupMembers) {
-						teks += ` ${mem.jid.split('@')[0]}@s.whatsapp.net\n`
-						members_id.push(mem.jid)
-					}
-					reply('𝑴𝑬𝑵𝑪𝑰𝑶𝑵 𝑫𝑬 𝑻𝑶𝑫𝑶𝑺'+teks+'')
-					break
-
-case 'ytmp3':
-                reply(naylachan)
-                anu = await fetchJson(`https://st4rz.herokuapp.com/api/yta2?url=${body.slice(7)}`)
-                if (anu.error) return reply(anu.error)
-                ingfomp3 = `*Canción encontrada*n➸ Titulo : ${anu.title}\n\n*El audio se esta enviando, ESPERA*`
-                buffer = await getBuffer(anu.thumb)
-                lagu = await getBuffer(anu.result)
-                nayla.sendMessage(from, buffer, image, {quoted: nay, caption: ingfomp3})
-                nayla.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', quoted: nay})
-                break
-case 'stctag':
-			if (!isGroupAdmins) return reply(mess.only.admin)
-                                        if (!isQuotedSticker) return reply('Y el stiker?')
-                                        boij = JSON.parse(JSON.stringify(nay).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-                                        delb = await nayla.downloadMediaMessage(boij)
-                                        await fs.writeFileSync(`stctagg.webp`, delb)
-                                        var group = await nayla.groupMetadata(from)
-                                        var member = group['participants']
-                                        var mem = []
-                                        member.map(async adm => {
-                                                mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
-                                        })
-					var itsme = `0@s.whatsapp.net`
-					var split = `${body.slice(8)}`
-					var selepbot = {
-						contextInfo: {
-							mentionedJid: mem,
-                                                        participant: itsme,                                                                                                                          quotedMessage: {
-                                                                extendedTextMessage: {
-                                                                text: split,
-							   }
-					      	      }
-					       }
-					}
-					result = fs.readFileSync(`stctagg.webp`)
-                                        nayla.sendMessage(from, result, sticker, selepbot)
-					await fs.unlinkSync(`stctagg.webp`)
-					break
-					
-					case 'imgtag':
-					if (!isGroupAdmins) return reply(mess.only.admin)
-                    if ((isMedia && !nay.message.videoMessage || isQuotedImage) && args.length == 0) {
-                        const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(nay).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: lol
-                        filePath = await nayla.downloadAndSaveMediaMessage(encmedia, filename = getRandom())
-                        var value = args.join(" ")
-                        var group = await nayla.groupMetadata(from)
-                        var member = group['participants']
-                        var mem = []
-                        member.map(async adm => {
-                            mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
-                        })
-                        var options = {
-                            contextInfo: { mentionedJid: mem },
-                            quoted: nay
-                        }
-                        ini_buffer = fs.readFileSync(filePath)
-                        nayla.sendMessage(from, ini_buffer, image, options)
-                        fs.unlinkSync(filePath)
-                    } else {
-                        reply(`Tag image yang sudah dikirim`)
-                    }
-                    break
-case 'cuenta':
-con = ["+","×","÷","-"]
-ty = con[Math.floor(Math.random() * con.length)]
-number1 = `${Math.floor(Math.random() * 100)}`
-number2 = `${Math.floor(Math.random() * 100)}`
-conta = `Cuanto es ${number1} ${ty} ${number2}?`
-reply(conta)
-break
-case 'dado':
-const dadus = ["⚀","⚁","⚂","⚃","⚄","⚅"]
-dadu = dadus[Math.floor(Math.random() * dadus.length)]
-dador = fs.readFileSync('./database/dados/'+dadu+'.webp')
-nayla.sendMessage(from, dador, sticker, {quoted: nay})
-break
-
-                      
-case 'ak47':
-					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=ak47`, {method: 'get'})
-					reply(naylachan)
-					var n = JSON.parse(JSON.stringify(anu));
-					var nime12k =  n[Math.floor(Math.random() * n.length)];
-					pok = await getBuffer(nime12k)
-					nayla.sendMessage(from, pok, image, { quoted: nay })
-					break
-case 'T-34':
-					
-					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=T-34`, {method: 'get'})
-					reply(ind.wait())
-					var n = JSON.parse(JSON.stringify(anu));
-					var nime5k =  n[Math.floor(ath.random() * n.length)];
-					pok = await getBuffer(nime5k)
-					nayla.sendMessage(from, pok, image, { quoted: nay })
-					break
-					case 'YAK-3':
-					
-					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=YAK-3`, {method: 'get'})
-					reply(naylachan)
-					var n = JSON.parse(JSON.stringify(anu));
-					var nime15k =  n[Math.floor(Math.random() * n.length)];
-					pok = await getBuffer(nime15k)
-					nayla.sendMessage(from, pok, image, { quoted: nay })
-					break
-					case 'YAK-9':
-					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=YAK-9`, {method: 'get'})
-					reply(naylachan)
-					var n = JSON.parse(JSON.stringify(anu));
-					var nime14k =  n[Math.floor(Math.random() * n.length)];
-					pok = await getBuffer(nime14k)
-					nayla.sendMessage(from, pok, image, { quoted: nay })
-					break
-					case 'LA-7':
-					
-					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=LA-7`, {method: 'get'})
-					reply(naylachan)
-					var n = JSON.parse(JSON.stringify(anu));
-					var nime13k =  n[Math.floor(Math.random() * n.length)];
-					pok = await getBuffer(nime13k)
-					nayla.sendMessage(from, pok, image, { quoted: nay })
-					break
-case 'leave':
-                    if (!isGroup) return reply(mess.only.group)
-                    if (!isGroupAdmins) return reply(mess.only.admin)
-                     setTimeout( () => {
-					nayla.groupLeave (from) 
-					}, 2000)
-                     setTimeout( () => {
-					nayla.updatePresence(from, Presence.composing) 
-					nayla.sendMessage(from, 'Adios Jotos🥱', text) // ur cods
-					}, 0)
-                     break
-case 'juancarlosesgei':   
-                reply(naylachan)
-                play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp4/2?q=${play}&apikey=FELIXCRACKAPI409`)
-               if (anu.error) return reply(anu.error)
-                 infomp3 = `*MÃºsica encontrada!!!*\nTitulo : ${result.title}\nFonte : ${result.source}\nTamanho : ${result.size}\n\n*Estou Baixando Sua MÃºsica, Enquanto Isso Me Segue No Insta @tiago.lveðŸ˜´*`
-                buffer = await getBuffer(anu.result.thumbnail)
-                lagu = await getBuffer(anu.result.url_audio)
-                nayla.sendMessage(from, buffer, image, {quoted: nay, caption: infomp3})
-                nayla.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: nay})
-                
-                break
 case 'glow':
                //Update By Mzailani & Adi Official
                
@@ -1367,7 +965,6 @@ case 'simi':
 					anu = await simih(teks) //fetchJson(`https://mhankbarbars.herokuapp.com/api/samisami?text=${teks}`, {method: 'get'})
 					reply(anu)
 					break
-
 case 'dropwater':  
                    if (!isElite) return reply(nayzelite)		
                    if (args.length < 1) return reply(`[❗] Ejemplo??\n*${prefix}${command} Felixcrack*`)
@@ -1392,8 +989,7 @@ case 'ffire':
                    anu = await getBuffer(`https://api.zeks.xyz/api/epep?apikey=FELIXCRACKAPI409&text=${F}`)
                    nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay})
                    break 
- case 'rayos':  
- case 'thunder':
+ case 'thunder':  
                    if (!isElite) return reply(nayzelite)		
                    if (args.length < 1) return reply(`[❗] Ejemplo??\n*${prefix}${command} Felixcrack*`)
                    reply(naylachan)
@@ -1407,22 +1003,6 @@ case 'ffire':
                    reply(naylachan)
                    F = body.slice(6)				    
                    anu = await getBuffer(`https://api.zeks.xyz/api/sandw?apikey=FELIXCRACKAPI409&text=${F}`)
-                   nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
-                   break 
-                   case 'neon2':  
-                   if (!isElite) return reply(nayzelite)		
-                   if (args.length < 1) return reply(`[❗] Ejemplo??\n*${prefix}${command} Felixcrack*`)
-                   reply(naylachan)
-                   F = body.slice(6)				    
-                   anu = await getBuffer(`https://lolhuman.herokuapp.com/api/textprome/neon?apikey=ec126cda0d93701db4bdfa79&text=${F}`)
-                   nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
-                   break 
-                   case 'fx1':  
-                   if (!isElite) return reply(nayzelite)		
-                   if (args.length < 1) return reply(`[❗] Ejemplo??\n*${prefix}${command} Felixcrack*`)
-                   reply(naylachan)
-                   F = body.slice(6)				    
-                   anu = await getBuffer(`https://lolhuman.herokuapp.com/api/photooxy1/summernature?apikey=ec126cda0d93701db4bdfa79&text=${F}`)
                    nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
                    break 
 case 'test':  
@@ -1450,7 +1030,16 @@ case 'clone':
 					  }
 					  break
 
-
+case 'ping':
+	case 'speed':
+  const timestamp = speed();
+  const latensi = speed() - timestamp
+  nayla.updatePresence(from, Presence.composing)
+  uptime = process.uptime()
+  nayla.sendMessage(from, `*El bot responde en*\n‣ *Speed* : ${latensi.toFixed(4)} _Segundos_\n\n*Info bot*\n‣ *Total de chats* : ${totalchat.length}\n‣ *Total de usuarios* :ME DA PAJA PONERLO MALPARIDO HIJO DE PUTA\n‣ *Bloqueados* : ${blocked.length}\n‣ *Tiempo activo* : ${kyun(uptime)}`, text, {
+	quoted: nay
+  })
+  break
 
 case 'listadmins':
 				case 'listadmin':
@@ -1470,13 +1059,38 @@ case 'online':
                 if (!isGroup) return reply(`Solo En Grupos`)
                 let ido = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : from
                 let online = [...Object.keys(nayla.chats.get(ido).presences), nayla.user.jid]
-                nayla.sendMessage(from, 'Lista de usuários online:\n' + online.map(v => '- @' + v.replace(/@.+/, '')).join `\n`, text, {
+                nayla.sendMessage(from, 'List Online:\n' + online.map(v => '- @' + v.replace(/@.+/, '')).join `\n`, text, {
                     quoted: nay1,
                     contextInfo: { mentionedJid: online }
                 })
                 break
 
+case 'infoall':
+                if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isGroup) return reply(mess.only.group)
+					var nom = mek.participant
+					members_id = []
+					teks = '\n'
+					for (let mem of groupMembers) {
+						teks += `┣❥   @${mem.jid.split('@')[0]}\n`
+						members_id.push(mem.jid)
+					}
+					mentions(`*From :* - [ 𝙁𝙓 𝘽𝙊𝙏 ] -\n*Info :*  ${body.slice(9)}\n*Total Member :* ${groupMembers.length} \n\n┏━━━⟪ *INFORMACIÓN* ⟫━━━┓`+teks+'╚═ *「 Felixcrack BOT 」* ', members_id, true)
+					break
 
+case 'runtime':
+uptime = process.uptime()
+const timestampi = speed();
+const latensip = speed() - timestampi
+			             anjink =`◪ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲
+├ *Nama bot : Felixcrack*
+├ *Server :* _*Baileys*_
+├ *Runtime :*
+├   \`\`\`${kyun(uptime)}\`\`\`
+├   \`\`\`${latensip.toFixed(4)} Second\`\`\`
+└─────────────`
+			             nayla.sendMessage(from, anjink, text,{quoted : nay1})
+			           break
 case 'runt':
 exports.runtime = function(seconds) {
 	seconds = Number(seconds);
@@ -1525,8 +1139,8 @@ case 'random':
         				console.log(randomv)
         				nayla.sendMessage(from, `╔✯〘 Te han seleccionado! 〙✯═ \n\n @${randomv.split('@')[0]}\n\n═✯〘 Para: ${body.slice(8)} 〙✯═`, text, {quoted : nay, contextInfo: {mentionedJid : [randomv], "forwardingScore": 999, "isForwarded": true}})
         				break
-case 'gay':
-	if (!isGroup) return reply(mess.only.group)
+case 'seberapagay':
+	
 	
 	if (args.length < 1) return nayla.sendMessage(from, 'Escribe el nombre', text, {
   quoted: mek
@@ -1555,14 +1169,7 @@ case 'notif':
   if (!isElite) return reply(nayzelite)	
 					if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isGroup) return reply(mess.only.group)
-teks = `╔═══════════════════
-╠═══「 NOTIFICACION 」═══
-╠══ Dada Por @${sender.split("@")[0]}
-╠══ Mensaje: 
-║${body.slice(7)}*
-╠══ Grupo: 
-╠══ ${groupMetadata.subject}
-╚════════════════════`
+teks = `Notif dada por @${sender.split("@")[0]}\n*Mensaje : ${body.slice(7)}*`
 group = await nayla.groupMetadata(from);
 member = group['participants']
 jids = [];
@@ -1574,7 +1181,7 @@ options = {
   contextInfo: {
 mentionedJid: jids
   },
-  quoted: nay1
+  quoted: freply
 }
 await nayla.sendMessage(from, options, text)
 break
@@ -1583,8 +1190,8 @@ case 'kicktime':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (nay.message.extendedTextMessage === undefined || nay.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
-					mentioned = nay.message.extendedTextMessage.contextInfo.mentionedJid
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
+					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					setTimeout( () => {
 					nayla.sendMessage(from, '🖕🏻 Otra cosa Juan Carlos Es GAY', text)
 					}, 8000)
@@ -1810,7 +1417,7 @@ case 'rate':
 					break
 				case 'reto':
 				  if (!isElite) return reply(nayzelite)	
-				const dare =['Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌??','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌??','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈??🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈??🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Envía un mensaje a tu ex diciéndole "Aún me gustas','enamoramiento telefónico / novia ahora y ss al jugador','Papanicolaou a un miembro del grupo','Dile "ERES TAN HERMOSA NO AMIGOS" a los chicos','ss llamadas recientes de whatsapp','suelta el emoji "🦄 ??" cada vez que escribes en hola durante 1 día','envía una nota de voz que diga ¿puedo llamarte bebé?','suelte la cita de la canción / cita, luego etiquete al miembro apropiado para esa cita','manda foto en calzones','Escribe en ingles por un dia','Cambia tu nombre a "Soy gay" durante 5 horaschatea para contactar con el pedido según el% de batería, sigues diciéndole "tengo suerte de tenerte','Publica en tu estado, soy gay','Dile a tu ex "te amo vuelve conmigo"','Manda una nota de voz haciendo gemidos','Dile a alguien de tu sexo opuesto que lo amas','Dile al siguiente que mande mensaje que lo amas','Manda fotos de tu crush','Borra tu whatsapp','Toma foto de cara y mandala','envía tu foto con una leyenda, soy un niño adoptado','Manda un audio gritando','Sal afuera de tu casa y grita','Cambia tu nombre a 3cm por un dia','Finge ser un bot durante 2 horas']
+				const dare =['Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌??','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌??','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈??🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Pasa pack 😈👌🏻','Envía un mensaje a tu ex diciéndole "Aún me gustas','enamoramiento telefónico / novia ahora y ss al jugador','Papanicolaou a un miembro del grupo','Dile "ERES TAN HERMOSA NO AMIGOS" a los chicos','ss llamadas recientes de whatsapp','suelta el emoji "🦄 ??" cada vez que escribes en hola durante 1 día','envía una nota de voz que diga ¿puedo llamarte bebé?','suelte la cita de la canción / cita, luego etiquete al miembro apropiado para esa cita','manda foto en calzones','Escribe en ingles por un dia','Cambia tu nombre a "Soy gay" durante 5 horaschatea para contactar con el pedido según el% de batería, sigues diciéndole "tengo suerte de tenerte','Publica en tu estado, soy gay','Dile a tu ex "te amo vuelve conmigo"','Manda una nota de voz haciendo gemidos','Dile a alguien de tu sexo opuesto que lo amas','Dile al siguiente que mande mensaje que lo amas','Manda fotos de tu crush','Borra tu whatsapp','Toma foto de cara y mandala','envía tu foto con una leyenda, soy un niño adoptado','Manda un audio gritando','Sal afuera de tu casa y grita','Cambia tu nombre a 3cm por un dia','Finge ser un bot durante 2 horas']
 					const der = dare[Math.floor(Math.random() * dare.length)]
 					tod = await getBuffer(`https://i.ibb.co/305yt26/bf84f20635dedd5dde31e7e5b6983ae9.jpg`)
 					nayla.sendMessage(from, tod, image, { quoted: nay, caption: '*Reto*\n\n'+ der })
@@ -1827,10 +1434,9 @@ case 'trumpsay' :
 			 nayla.sendMessage(from, stufff, image, {quoted : nay, caption : "By FX-BOT"})
 	                  
 	                  break
-
        case 'join':  
                     if (!isElite) return reply(nayzelite)	
-                    if (args.length < 1) return reply(`Ejemplo ${prefix}join https://chat.whatsapp.com/CAPUjeauAafAskp3o5LDNj`)
+                    if (args.length < 1) return reply(`contoh ${prefix}join https://chat.whatsapp.com/CAPUjeauAafAskp3o5LDNj`)
                     const bug11 = body.slice(5)
                     if (bug11.length > 300) return nayla.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', msgType.text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "caption": `*MY BOTZ NEW*`} } }})
                     var nomor = nay.participant
@@ -1875,50 +1481,26 @@ case 'ayuda':
 case 'instalar':
 					nayla.sendMessage(from, instalar(prefix, sender), text, { quoted: nay })
 					break
-    case 'info':
-			        const timestamp = speed();             
-                    const latensi = speed() - timestamp
-                    nayla.updatePresence(from, Presence.composing)
-			    	var itsme = `0@s.whatsapp.net`
-			    	var split = `╾╼╾╼╾╼╾✪ FX ┃ ᴮᴼᵀ ✪╾╼╾╼╾╼╾╼`
-		     	   var selepbot =         {
-					contextInfo:   { participant: itsme, quotedMessage: { extendedTextMessage: { text: split,	}}}}
+			        case 'info':
+			        
 			        uptime = process.uptime()
 			        me = nayla.user 
-			        teks = `╭╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼\n`
-			        teks += `│‣Nombre Del Bot: ${me.name}\n`
-			        teks += `├╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼\n`
-			        teks += `│‣Nombre Del Dueño: ${ownername}\n`
-			        teks += `├╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼\n`
-			        teks += `│‣Autor: Felixcrack 499\n`
-			        teks += `├╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼\n`
-			        teks += `│‣Número Del Bot: \n`
-                    teks += `│‣${nayla.user.jid}\n`
-			        teks += `├╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼\n`
-			        teks += `│‣Suscribete: \n`
-                    teks += `│‣https://cutt.ly/6bCcxbX*\n`
-			        teks += `├╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼\n`
-			        teks += `│‣Velocidad: ${latensi.toFixed(4)} _Segundos_\n`
-			        teks += `├╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼\n`
-                    teks += `│‣Prefijo: 「 ${prefix} 」\n`
-                    teks += `├╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼\n`
-                    teks += `│‣Chats Totales: ${totalchat.length}\n`
-                    teks += `├╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼\n`
-                    teks += `│‣Usuarios Bloqueados: ${blocked.length}\n`
-                    teks += `├╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼\n`
-                    teks += `│‣Version De Whatsapp* : ${nayla.user.phone.wa_version}\n`
-                    teks += `├╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼\n`
-                    teks += `│‣Tiempo activo*: ${kyun(uptime)}\n`
-                    teks += `├╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼\n`
-                    teks += `│‣Tu Eres: ${pushname}\n`
-                    teks += `├╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼\n`
-                    teks += `│‣Verificado: ✓\n`
-                    teks += `├╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼\n`
-                    teks += `│‣Baterai :* ${baterai.baterai}%\n`
-                    teks += `╰╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼╾╼\n`
-			        nayla.sendMessage(from, teks, MessageType.text, selepbot)
+			        inf1 = `➻Nombre Del Bot: ${namebot}\n`
+			        inf1 += `➻Nombre Del Dueño: ${ownername}\n`
+			        inf1 += `➻Autor: Felixcrack 499\n`
+			        inf1 += `➻Número Del Bot: ${numberbot}\n`
+			        inf1 += `➻Suscribete: https://youtube.com/channel/UCqCaZ_SEhSykF3-PR5os7YA*\n`
+			        inf1 += `➻Velocidad: ${process.uptime()}\n`
+                    inf1 += `➻Prefijo: ${xxx}${prefix}${xxx}\n`
+                    inf1 += `➻Chats Totales: ${totalchat.length}\n`
+                    inf1 += `➻Usuarios Bloqueados: ${blocked.length}\n`
+                    inf1 += `➻Version De Whatsapp* : ${nayla.user.phone.wa_version}\n`
+                    inf1 += `➻Tiempo activo*: ${kyun(uptime)}\n`
+                    inf1 += `➻Tu Eres: ${pushname}\n`
+                    inf1 += `➻Verificado: ✓\n`
+                    inf1 += `➻Baterai :* ${baterai.baterai}%\n`
+			        reply(inf1)
 			        break
-
 					case 'fxbot': 					
 					const serialUser = createSerial(20)
 					veri = sender
@@ -1928,7 +1510,7 @@ case 'instalar':
 					} catch {						 
 					}
 				   	reply(elitenay)
-					console.log(color(`FXBOT !!!! ${pushname} NUEVO USUÁRIO UWU`, 'yellow'))
+					console.log(color(`HORE !!!! ${pushname} BARU SAJA MENJADI KAUM ELITE DI BOT INI`, 'yellow'))
 					} else {
 					addEliteUser(sender, pushname, time, serialUser)
 					try {						 
@@ -1938,11 +1520,12 @@ case 'instalar':
 		         	console.log(color(`HORE !!!! ${pushname} BARU SAJA MENJADI KAUM ELITE DI BOT INI`, 'yellow'))
 				    }
 				    break						       	 			            			         
-                  	
-        	case 'menu': 
-			case '?':
+                  	case 'help':  
+			    	case 'menu': wew = fs.readFileSync(`./src/fx.jpg`)                     
 			    	if (!isElite) return reply(nayzelite)	
-                    reply(menuZ)
+                    runtime = process.uptime()
+                    const SS2 = fs.readFileSync('menu/undef2.png')                    
+                    reply(menuZ)                                    
                     const SS1 = fs.readFileSync('sound/chann.mp3')
                     nayla.sendMessage(from, SS1, MessageType.audio, {mimetype: 'audio/mp4', ptt:true, quoted: nay1})
                     break
@@ -1952,19 +1535,19 @@ case 'instalar':
                     break                    
                     case 'editfoto':                      
                     if (!isElite) return reply(nayzelite)	
-                    reply(editfoto) 
+                    reply(makerfoto) 
                     break                                                                                           
-                    case 'menucreaador':                      
+                    case 'ownermenu':                      
                     if (!isElite) return reply(nayzelite)	
-                    reply(menucreador)                                    
+                    reply(ownermenu)                                    
                     break
-                    case 'menuespecial':                      
+                    case 'spesialmenu':                      
                     if (!isElite) return reply(nayzelite)	
-                    reply(menuespecial)
+                    reply(spesialmenu)
                     break                    
-                    case 'certificado':                      
+                    case 'sertifikat':                      
                     if (!isElite) return reply(nayzelite)	
-                    reply(certificado) 
+                    reply(sertifikat) 
                     break                                   
                     case 'randomtext':                      
                     if (!isElite) return reply(nayzelite)	
@@ -1978,14 +1561,9 @@ case 'instalar':
                     if (!isElite) return reply(nayzelite)	                                 
                     reply(tagmenu) 
                     break
-                    case 'wallpapers':     
-                    case 'wall':                 
-                    if (!isElite) return reply(nayzelite)	                                  
-                    reply(wallpapers) 
-                    break
-                    case 'checkmenu':                      
+                    case 'cekmenu':                      
                     if (!isElite) return reply(nayzelite)	                                   
-                    reply(checkmenu) 
+                    reply(cekmenu) 
                     break
                     case 'internalmenu':                      
                     if (!isElite) return reply(nayzelite)	                                  
@@ -1999,17 +1577,17 @@ case 'instalar':
                     if (!isElite) return reply(nayzelite)	                                  
                     reply(soundmenu)  
                     break
-                    case 'descargas':                      
+                    case 'downloadmenu':                      
                     if (!isElite) return reply(nayzelite)	                                  
-                    reply(descargas)
+                    reply(downloadmenu)
                     break
                     case 'makermenu':                      
                     if (!isElite) return reply(nayzelite)	                                                        	
                     reply(makermenu)  
                     break    
-                    case 'grupomenu':                      
+                    case 'grupmenu':                      
                     if (!isElite) return reply(nayzelite)	                              
-                    reply(grupomenu)
+                    reply(grupmenu)
                     break    
                     case 'islammenu':                      
                     if (!isElite) return reply(nayzelite)	                              
@@ -2026,7 +1604,7 @@ case 'instalar':
                     break
 
 case 'semoji':
-                    if (args.length == 0) return reply(`Ejemplo: ${prefix + command} 😭`)
+                    if (args.length == 0) return reply(`Contoh: ${prefix + command} 😭`)
                     emoji = args[0]
                     try {
                         emoji = encodeURI(emoji[0])
@@ -2044,19 +1622,43 @@ case 'narutologo2':
                    anu = await getBuffer(`https://videfikri.com/api/textmaker/narutobanner/?text=${F}`)
                    nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙𝑖????𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
                    break        
-                    
+                   case 'test':  
+                   if (!isElite) return reply(nayzelite)		
+                   if (args.length < 1) return reply(`[❗] Ejemplo??\n*${prefix}${command} nayla*`)
+                   F = body.slice(13)
+                   reply(naylachan)
+                   anu = await getBuffer(`http://hadi-api.herokuapp.com/api/photoxy/under-orchids?teks=${F}`)
+                   nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
+                   break        
                      
-				    
+				    case 'ytmp4':
+                if (args.length < 1) return reply(`Linknya Mana Cuy?\nContoh : ${prefix + command} https://youtu.be/b0md2fEIFpg`)
+                reply(naylachan)
+                ini_link = args[0]
+                get_result = await fetchJson(``)
+                get_result = get_result.result
+                ini_txt = `Titulo : ${get_result.title}\n`
+                ini_txt += `Carga : ${get_result.uploader}\n`
+                ini_txt += `Duración : ${get_result.duration}\n`
+                ini_txt += `Vistas : ${get_result.view}\n`
+                ini_txt += `Like : ${get_result.like}\n`
+                ini_txt += `Dislike : ${get_result.dislike}\n`
+                ini_txt += `Descripción :\n ${get_result.description}\n\n\n`
+                ini_buffer = await getBuffer(get_result.thumbnail)
+                nayla.sendMessage(from, ini_buffer, image, { quoted: nay1, caption: ini_txt })
+                get_audio = await getBuffer(get_result.link[0].link)
+                nayla.sendMessage(from, get_audio, video, { mimetype: 'video/mp4', filename: `${get_result.title}.mp4`, quoed: nay1})
+                break
 case 'ttp':
                 case 'ttp2':
                 case 'ttp3':
                 case 'ttp4':
                 case 'amongus':
                 if (!isElite) return reply(nayzelite)
-                if (args.length < 1) return reply(`teksnya mana bruh?\nEjemplo ${prefix + command} ${pushname}`)
+                if (args.length < 1) return reply(`teksnya mana bruh?\ncontoh ${prefix + command} ${pushname}`)
                 dppa = args.join(" ")
                 reply(naylachan)
-                dapuhy = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=909cc1aa05327d070522d108&text=${dppa}`)
+                dapuhy = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${LolHuman}&text=${dppa}`)
                 nayla.sendMessage(from, nayla, sticker, {quoted: nay})
                 break
 				    
@@ -2106,9 +1708,9 @@ case 'ttp':
                     if (args.length < 1) return reply('MASUKKAN JUDUL') 
 					reply(naylachan)
                     anu = await fetchJson(`https://videfikri.com/api/steam/?username=${args[0]}`, {method: 'get'})
-                    anu1 = `➻ *Nombre* : ${anu.result.name}\n`
-                    anu1 += `➻ *Usuário* : ${anu.result.username}\n`
-                    anu1 += `➻ *País* : ${anu.result.country}\n`
+                    anu1 = `➻ *NAMA* : ${anu.result.name}\n`
+                    anu1 += `➻ *USER* : ${anu.result.username}\n`
+                    anu1 += `➻ *COUNTRY* : ${anu.result.country}\n`
                     anu1 += `➻ *IMG* : ${anu.result.image}\n`
                     anu1 += `➻ *LEVEL* : ${anu.result.level}\n`
                     anu1 += `➻ *FACEIT* : ${anu.result.faceit}\n`
@@ -2163,7 +1765,21 @@ case 'ttp':
                     anu3 = await getBuffer(anu.result.video)
                     nayla.sendMessage(from, anu3, video, {mimetype: 'video/mp4', quoted: nay1})
                     break                          
-                    
+                    case 'ytsearch':                      	  
+                    if (!isElite) return reply(nayzelite)	
+                    if (args.length < 1) return reply('MASUKKAN LINK/URL FB') 
+					reply(naylachan)
+                    anu = await fetchJson(`https://videfikri.com/api/ytsearch/?query=${args[0]}`, {method: 'get'})
+                    anu1 = getBuffer(anu.result.data.thumbnail)
+                    anu2 = `➻ *NAME* : ${anu.result.data.judul}\n`
+                    anu2 += `➻ *ID* : ${anu.result.data.id}\n`                    
+                    anu2 += `➻ *DURASI* : ${anu.result.data.duration}\n`
+                    anu2 += `➻ *CHANEL* : ${anu.result.data.id}\n`
+                    anu2 += `➻ *PUBLIC.AT* : ${anu.result.data.published_at}\n`
+                    anu2 += `➻ *VIEWS* : ${anu.result.data.views}\n`
+                    anu2 += `➻ *DESK* : ${anu.result.data.description}\n`  
+                    nayla.sendMessage(from, anu1, image, {caption: anu2, quoted: nay1})
+                    break    
                          
 /* =======================================================[ FUN-API ]==============================================================*/    
 /*=====================================================[ API VIDEFIKRI ]==============================================================*/                  	    
@@ -2437,12 +2053,18 @@ case 'ttp':
                    }
                    nayla.sendMessage(from, anu1, text,{quoted: nay1})
                    break  
-                   case 'wikien':
-					if (args.length < 1) return reply('masukan kata kunci')
-					tels = body.slice(8)		
-					anu = await fetchJson(`https://videfikri.com/api/wikieng/?query=indonesia`, {method: 'get'})
-					reply(anu.result)
-					break		
+                   case 'wikien':  
+                   if (!isElite) return reply(nayzelite)		
+                   if (args.length < 1) return reply('MASUKKAN QUERY') 
+                   anu = await fetchJson(`https://videfikri.com/api/wikieng/?query=${body.slice(8)}`)   
+                   anu1 = 'WIKI SOAL EN :\n'
+                   for (var x of anu.result) {
+                   anu1 = `➻ *JUDUL* : ${x.title}\n`
+                   anu1 += `➻ *PAGEID* : ${x.pageid}\n`
+                   anu1 += `➻ *ULASAN* : ${x.desc}\n`
+                   }
+                   nayla.sendMessage(from, anu1, text,{quoted: nay1})
+                   break   
                    case 'covidid':  
                    if (!isElite) return reply(nayzelite)		
                    anu = await fetchJson(`https://videfikri.com/api/covidindo/`)
@@ -2562,12 +2184,12 @@ case 'ttp':
                    anu = await getBuffer(`https://videfikri.com/api/textmaker/mugflower?text=${F}`)
                    nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1}) 
                    break 
-                   case 'narutoba':  
+                   case 'naruto':  
                    if (!isElite) return reply(nayzelite)		
                    if (args.length < 1) return reply(`[❗] Ejemplo??\n*${prefix}${command} Felixcrack*`)
                    reply(naylachan)
                    F = body.slice(8)				    
-                   anu = await getBuffer(`https://videfikri.com/api/textmaker/narutobanner/?text=${F}`)
+                   anu = await getBuffer(`https://videfikri.com/api/textmaker/narutobanner?text=${F}`)
                    nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1}) 
                    break 
                    case 'glass':  
@@ -2576,7 +2198,7 @@ case 'ttp':
                    reply(naylachan)
                    F = body.slice(7)				    
                    anu = await getBuffer(`https://videfikri.com/api/textmaker/paperonglass?text=${F}`)
-                   nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙??𝑥𝑐??𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1}) 
+                   nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1}) 
                    break 
                    case 'romance':  
                    if (!isElite) return reply(nayzelite)		
@@ -2809,7 +2431,7 @@ case 'ttp':
                    reply(naylachan)
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/watercolor?text=${F}`)
-                   nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙??𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
+                   nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
                    break
                    case 'kling':  
                    if (!isElite) return reply(nayzelite)		
@@ -2923,7 +2545,7 @@ case 'ttp':
                    reply(naylachan)
                    F = body.slice(9)
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/barcode_maker?text=${F}`)
-                   nayla.sendMessage(from, anu, image, {caption: `𝐹??𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
+                   nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
                    break
                    case 'cersex':  
                    if (!isElite) return reply(nayzelite)		
@@ -3051,15 +2673,16 @@ case 'ttp':
                    anu1 = await getBuffer(anu.result)
                    nayla.sendMessage(from, anu1, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
                    break
-                   case 'nickff': 
-					nayla.updatePresence(from, Presence.composing) 
-					data = await fetchJson(`https://api.zeks.xyz/api/nickepep?apikey=apivinz`, {method: 'get'})
-					teks = '=================\n'
-					for (let i of data.result) {
-						teks += `*Nombre* : ${i}\n=================\n`
-					}
-					reply(teks.trim())
-					break
+                   case 'nickff':  
+                   if (!isElite) return reply(nayzelite)		
+		            if (!isPrem) return reply(prem1)
+                   anu = await fetchJson(`https://api.zeks.xyz/api/nickepep?apikey=apivinz`)
+                   anu1 = `➻ *NIHH* : ${anu.result}\n`
+                   anu1 += `➻ *NIHH* : ${anu.result}\n`
+                   anu1 += `➻ *NIHH* : ${anu.result}\n`
+                   anu1 += `➻ *NIHH* : ${anu.result}\n`
+                   reply(anu1)
+                   break
                    case 'tahta':  
                    if (!isElite) return reply(nayzelite)		
                    if (args.length < 1) return reply(`[❗] Ejemplo??\n*${prefix}${command} nayla*`)
@@ -3090,7 +2713,7 @@ case 'ttp':
                    F = body.slice(6)
                    reply(naylachan)
                    anu = await getBuffer(`https://api.zeks.xyz/api/wolflogo?apikey=apivinz&text1=rimurubotz&text2=${F}`)
-                   nayla.sendMessage(from, anu, image, {caption: `??𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
+                   nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
                    break 
                    case 'tfire':  
                    if (!isElite) return reply(nayzelite)		
@@ -3098,7 +2721,7 @@ case 'ttp':
                    F = body.slice(7)
                    reply(naylachan)
                    anu = await getBuffer(`https://api.zeks.xyz/api/tfire?text=${F}&apikey=apivinz`)                   
-                   nayla.sendMessage(from, anu, image, {caption: `𝐹??𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
+                   nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
                    break                
                    case 'ytgold':  
                    if (!isElite) return reply(nayzelite)		
@@ -3116,7 +2739,7 @@ case 'ttp':
                    F = body.slice(10)
                    reply(naylachan)
                    anu = await getBuffer(`https://api.zeks.xyz/api/splaybutton?text=${F}&apikey=apivinz`)
-                   nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐??𝑎𝑐𝑘 𝐵𝑂??`, quoted: nay1})
+                   nayla.sendMessage(from, anu, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂??`, quoted: nay1})
                    break
                    case 't3d':  
                    if (!isElite) return reply(nayzelite)		
@@ -3218,7 +2841,28 @@ case 'ttp':
                    anu1 = await getBuffer(anu.link)
                    nayla.sendMessage(from, anu1, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎??𝑘 𝐵𝑂𝑇`, quoted: nay1})
                    break
-                   
+                   case 'play':
+  //if (!isRegister) return reply(mess.only.daftarB)
+  if (args.length == 0) return reply(`Ejemplo: ${prefix + command} Me olvide de vivir`)
+                    query = args.join(' ')
+		 //   fakee = fs.readFileSync('./src/img.jpg')
+                    get_result = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?apikey=FELIXCRACKAPI409&query=${query}`)
+                    get_result = get_result.result
+                    get_info = get_result.info
+                    ini_txt = `🧊Titulo : ${get_info.title}\n`
+                    ini_txt += `🕵🏻‍♀️️Publicador : ${get_info.uploader}\n`
+                    ini_txt += `🕐Duracion : ${get_info.duration}\n`
+                    ini_txt += `👀Vistas : ${get_info.view}\n`
+                    ini_txt += `👍🏻Like : ${get_info.like}\n`
+                    ini_txt += `👎🏻Dislike : ${get_info.dislike}\n`
+                    ini_txt += `📋Descripcion :\n ${get_info.description}\n\n`
+		    ini_txt += `Si el audio no llega, puede descargar por aqui: :\n ${get_result.audio[3].link}\n\n`
+		    ini_txt += `Puede descargar tambien el video aqui: :\n ${get_result.video[0].link}\n`
+                    ini_buffer = await getBuffer(get_info.thumbnail)
+                    await aqul.sendMessage(from, ini_buffer, image, { quoted: qul, caption: ini_txt, contextInfo: {"forwardingScore": 9999, "isForwarded": true} })
+                    get_audio = await getBuffer(get_result.audio[3].link)
+                    await aqul.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', duration :-999999999999999, filename: `${get_info.title}.mp3`, quoted: qul })
+                    break
                    case 'dog':  
                    if (!isElite) return reply(nayzelite)		
                    reply(naylachan)
@@ -3266,7 +2910,7 @@ case 'ttp':
                    reply(naylachan)
                    anu = await fetchJson(`https://some-random-api.ml/meme`)
                    anu1 = await getBuffer(anu.image)
-                   nayla.sendMessage(from, anu1, image, {caption: `n𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
+                   nayla.sendMessage(from, anu1, image, {caption: `nih kak`, quoted: nay1})
                    break
                    
               
@@ -3418,7 +3062,7 @@ case 'ttp':
 				   jds.push(C1.jid)
 				   mentions(D1, jds, true)
 				   break
-				   case 'randomship':
+				   case 'jadian':
 				   if (!isElite) return reply(nayzelite)	
 				   if (!isGroup) return reply(`GROUP ONLY`)
  				   jds = []
@@ -3426,7 +3070,7 @@ case 'ttp':
   		 		   const B11 = groupMembers
  				   const C11 = A11[Math.floor(Math.random() * A11.length)] 				   
  				   const C22 = B11[Math.floor(Math.random() * B11.length)]
-				   D11 = `●❯────────────────❮●\n*La pareja del dia \n@${C11.jid.split('@')[0]} \n❤️\n@${C22.jid.split('@')[0]}\n●❯────────────────❮●`                  
+				   D11 = `Cieee @${C11.jid.split('@')[0]} ❤ @${C22.jid.split('@')[0]}\nSELAMAT MENEMPUH KEHIDUPAN BARU!!`                  
 				   jds.push(C11.jid)
 				   jds.push(C22.jid)
 				   mentions(D11, jds, true)
@@ -3460,17 +3104,7 @@ case 'ttp':
 /*====================================================[ CASE BY NAYLA ]==============================================================*/                    	                                          
                                                                                                                                                                                                                                                                                                                                                           
                    case 'wallteknologi':  
-                   case 'cyberspace':  
-                   if (!isElite) return reply(nayzelite)	
-                   reply(naylachan)
-                   anu = await fetchJson(`https://alpin-api-2021.herokuapp.com/api/wallpaper/cyberspace?apikey=alpin1`)
-                   anu1 = JSON.parse(JSON.stringify(anu.result));
-                   anu2=  anu1[Math.floor(Math.random() * anu1.length)];
-                   anu3 = await getBuffer(anu2)
-                   nayla.sendMessage(from, anu3, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
-                   break
-                   case 'tecnologia':  
-                   case 'walpegunungan':  
+                   case 'walteknologi':  
                    if (!isElite) return reply(nayzelite)	
                    reply(naylachan)
                    anu = await fetchJson(`https://alpin-api-2021.herokuapp.com/api/wallpaper/teknologi?apikey=alpin1`)
@@ -3479,18 +3113,18 @@ case 'ttp':
                    anu3 = await getBuffer(anu2)
                    nayla.sendMessage(from, anu3, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
                    break
-                   case 'hacker':  
-                   case 'walmuslim':  
+                   case 'wallpegunungan':  
+                   case 'walpegunungan':  
                    if (!isElite) return reply(nayzelite)	
                    reply(naylachan)
-                   anu = await fetchJson(`https://alpin-api-2021.herokuapp.com/api/wallpaper/programming?apikey=alpin1`)
+                   anu = await fetchJson(`https://alpin-api-2021.herokuapp.com/api/wallpaper/pegunungan?apikey=alpin1`)
                    anu1 = JSON.parse(JSON.stringify(anu.result));
                    anu2=  anu1[Math.floor(Math.random() * anu1.length)];
                    anu3 = await getBuffer(anu2)
                    nayla.sendMessage(from, anu3, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
                    break
-                   case 'muslin':  
-                   case 'walcyber':  
+                   case 'wallmuslim':  
+                   case 'walmuslim':  
                    if (!isElite) return reply(nayzelite)	
                    reply(naylachan)
                    anu = await fetchJson(`https://alpin-api-2021.herokuapp.com/api/wallpaper/muslim?apikey=alpin1`)
@@ -3499,15 +3133,25 @@ case 'ttp':
                    anu3 = await getBuffer(anu2)
                    nayla.sendMessage(from, anu3, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
                    break
-                   case 'montañas':  
-                   case 'walhacker':  
+                   case 'wallcyber':  
+                   case 'walcyber':  
                    if (!isElite) return reply(nayzelite)	
                    reply(naylachan)
-                   anu = await fetchJson(`https://alpin-api-2021.herokuapp.com/api/wallpaper/pegunungan?apikey=alpin1`)
+                   anu = await fetchJson(`https://alpin-api-2021.herokuapp.com/api/wallpaper/cyberspace?apikey=alpin1`)
                    anu1 = JSON.parse(JSON.stringify(anu.result));
                    anu2=  anu1[Math.floor(Math.random() * anu1.length)];
                    anu3 = await getBuffer(anu2)
-                   nayla.sendMessage(from, anu3, image, {caption: `𝐹𝑒𝑙𝑖??𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
+                   nayla.sendMessage(from, anu3, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
+                   break
+                   case 'wallhacker':  
+                   case 'walhacker':  
+                   if (!isElite) return reply(nayzelite)	
+                   reply(naylachan)
+                   anu = await fetchJson(`https://alpin-api-2021.herokuapp.com/api/wallpaper/programming?apikey=alpin1`)
+                   anu1 = JSON.parse(JSON.stringify(anu.result));
+                   anu2=  anu1[Math.floor(Math.random() * anu1.length)];
+                   anu3 = await getBuffer(anu2)
+                   nayla.sendMessage(from, anu3, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
                    break
                    case 'quotes1':  
                     if (!isElite) return reply(nayzelite)	
@@ -3554,7 +3198,7 @@ case 'ttp':
                    F = body.slice(7)			                  
                    anu = await fetchJson(`https://alpin-api-2021.herokuapp.com/api/textmaker/yamaker?text=${F}&theme=metal-epek&apikey=alpin1`)
                    anu1 = await getBuffer(anu.result.url)
-                   nayla.sendMessage(from, anu1, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟??𝑐?? 𝐵𝑂𝑇`, quoted: nay1})
+                   nayla.sendMessage(from, anu1, image, {caption: `𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay1})
                    break
                    case 'metal1':  
                     if (!isElite) return reply(nayzelite)	 
@@ -3684,7 +3328,7 @@ case 'ttp':
                     if (!isElite) return reply(nayzelite)	
 		  	    	nayla.updatePresence(from, Presence.composing)
 			    	var itsme = `0@s.whatsapp.net`
-			    	var split = `Numero De Chats:`
+			    	var split = `ALL CHAT BOTZ`
 		     		var selepbot =         {
 					contextInfo:   {
 					participant: itsme,
@@ -3692,7 +3336,7 @@ case 'ttp':
 					extendedTextMessage: {
 					text: split,
 	     			}
-     				}  
+     				}
 	    			}
 			      	}
 			     	teks = `Total : ${totalchat.length}`
@@ -3817,20 +3461,20 @@ case 'ttp':
                     case 'setprefix':  
                     if (!isElite) return reply(nayzelite)	
 				    if (args.length < 1) return
-			        if (!isOwner) return reply(`「❗」ESTE COMANDO SOLO PUEDE SER USADO POR MI CREADOR.`)
+			        if (!isOwner) return reply(`lu owner?`)
                     prefix = args[0]
                     reply(`Change Prefix To ${prefix} SUCCESS!`)					 
 					break 
 					case 'setreply':  
                     if (!isElite) return reply(nayzelite)	
 				    if (args.length < 1) return
-			        if (!isOwner) return reply(`「❗」ESTE COMANDO SOLO PUEDE SER USADO POR MI CREADOR.`)
+			        if (!isOwner) return reply(`lu owner?`)
                     naylachan = body.slice(10)
                     reply(`Change reply To ${naylachan} SUCCESS!`)					 
 					break 
 					case 'setpp':  
                     if (!isElite) return reply(nayzelite)	
-					if (!isOwner) return reply(`「❗」ESTE COMANDO SOLO PUEDE SER USADO POR MI CREADOR.`) 
+					if (!isOwner) return reply(`lu owner?`) 
 	    	        boij = JSON.parse(JSON.stringify(nay).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 			        delb = await nayla.downloadMediaMessage(boij)
 			        fs.writeFileSync('./menu/undef2.png', delb)
@@ -3838,7 +3482,7 @@ case 'ttp':
 			        break 
 			        case 'setthum':  
                     if (!isElite) return reply(nayzelite)	
-					if (!isOwner) return reply(`「❗」ESTE COMANDO SOLO PUEDE SER USADO POR MI CREADOR.`) 
+					if (!isOwner) return reply(`lu owner?`) 
 	    	        boij = JSON.parse(JSON.stringify(nay).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 			        delb = await nayla.downloadMediaMessage(boij)
 			        fs.writeFileSync('./menu/undef1.png', delb)
@@ -3847,21 +3491,21 @@ case 'ttp':
 					case 'setwelcome':  
                     if (!isElite) return reply(nayzelite)	
 				    if (args.length < 1) return
-			        if (!isOwner) return reply(`「❗」ESTE COMANDO SOLO PUEDE SER USADO POR MI CREADOR.`)
+			        if (!isOwner) return reply(`lu owner?`)
                     welcome1 = body.slice(12)
                     reply(`Change welcome To ${welcome1} SUCCESS!`)					 
 					break
 					case 'setout':  
                     if (!isElite) return reply(nayzelite)	
 				    if (args.length < 1) return
-			        if (!isOwner) return reply(`「❗」ESTE COMANDO SOLO PUEDE SER USADO POR MI CREADOR.`)
+			        if (!isOwner) return reply(`lu owner?`)
                     welcome2 = body.slice(8)
                     reply(`Change out To ${welcome2} SUCCESS!`)					 
 					break  
 					case 'settz':  
                     if (!isElite) return reply(nayzelite)	
 				    if (args.length < 1) return
-			        if (!isOwner) return reply(`「❗」ESTE COMANDO SOLO PUEDE SER USADO POR MI CREADOR.`)
+			        if (!isOwner) return reply(`lu owner?`)
                     tz = args[0]
                     reply(`Change tz To ${tz} SUCCESS!`)					 
 					break 
@@ -3960,7 +3604,7 @@ case 'ttp':
 					break
 					case 'clearall':  
                     if (!isElite) return reply(nayzelite)	
-					if (!isOwner) return reply(`「❗」ESTE COMANDO SOLO PUEDE SER USADO POR MI CREADOR.?`)
+					if (!isOwner) return reply(`lu owner??`)
 					anu = await nayla.chats.all()
 					nayla.setMaxListeners(25)
 					for (let _ of anu) {
@@ -3970,40 +3614,36 @@ case 'ttp':
 					break						 	 
                     case 'linkgc':  
                     if (!isElite) return reply(nayzelite)	
-				    if (!isGroup) return reply(mess.only.group)
-				    if (!isBotGroupAdmins) return reply(`「❗」ESTE COMANDO SOLO SE PUEDE USAR CUANDO EL BOT ES ADMIN`)
+				    if (!isGroup) return reply(`GRUB ONLY`) 
+				    if (!isBotGroupAdmins) return reply(`BOT BUKAN ADMIN`)
 				    linkgc = await nayla.groupInviteCode (from)
-				    yeh = `https://chat.whatsapp.com/${linkgc}\n\nLink Del Grupo *${groupName}*`
+				    yeh = `https://chat.whatsapp.com/${linkgc}\n\nlink Group *${groupName}*`
 				    nayla.sendMessage(from, yeh, text, {quoted: nay1})			       
 					break
-				    case 'tagall':
-                if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isGroup) return reply(mess.only.group)
-					var nom = nay.participant
+				    case 'tagall':  
+                    if (!isElite) return reply(nayzelite)	 
+					if (!isGroupAdmins) return
 					members_id = []
-					teks = '\n'
+					teks = (args.length > 1) ? body.slice(8).trim() : ''
+					teks += '\n\n'
 					for (let mem of groupMembers) {
-						teks += `├╼ @${mem.jid.split('@')[0]}\n`
-						members_id.push(mem.jid)
+					teks += `➪ @${mem.jid.split('@')[0]}\n`
+					members_id.push(mem.jid)
 					}
-					mentions(`*▢ Grupo:*  ${groupName}\n*▢ Miembros:* ${groupMembers.length} \n*▢ Total De Admins:* ${groupAdmins.length}\n┌───⊷ *MENCIONES* ⊶`+teks+'└─────✪ FX ┃ ᴮᴼᵀ ✪───────* ', members_id, true)
+					mentions(teks, members_id, true)
 					break
 				    case 'delete':  
-				case 'del':  
-				    case 'd':  	
-				if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-				if (!isGroupAdmins) return reply(mess.only.admin)
                     if (!isElite) return reply(nayzelite)	
-				    
+				    case 'del':  
+				    case 'd':  	
 				    nayla.deleteMessage(from, { id: nay.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true }) 
 				    break
 				    case 'kick':  
                     if (!isElite) return reply(nayzelite)	
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isBotGroupAdmins) return reply(`「❗」ESTE COMANDO SOLO SE PUEDE USAR CUANDO EL BOT ES ADMIN`)
-					if (nay.message.extendedTextMessage === undefined || nay.message.extendedTextMessage === null) return reply('Etiqueta al que quieres eliminar!')
+					if (!isGroup) return reply(`GRUP ONLY`)
+					if (!isGroupAdmins) return reply(`LU ADMIN??`)
+					if (!isBotGroupAdmins) return reply(`BOT BUKAN ADMIN`)
+					if (nay.message.extendedTextMessage === undefined || nay.message.extendedTextMessage === null) return reply('tag yg ingin di kick!')
 					mentioned = nay.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
 					teks = ''
@@ -4014,14 +3654,14 @@ case 'ttp':
 					mentions(teks, mentioned, true)
 					nayla.groupRemove(from, mentioned)
 					} else {
-					mentions(`SE ELIMINARÁ A @${mentioned[0].split('@')[0]} 🥵`, mentioned, true)
+					mentions(`OTW KICK @${mentioned[0].split('@')[0]} ??`, mentioned, true)
 					nayla.groupRemove(from, mentioned)
 					}					
 					break 
 					case 'hidetag':  
                     if (!isElite) return reply(nayzelite)	              
-				    if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
+				    if (!isGroup) return reply(`GRUP ONLY`)
+					if (!isGroupAdmins) return reply(`LU ADMIN??`)
 					var value = body.slice(9)
 					var group = await nayla.groupMetadata(from)
 					var member = group['participants']
@@ -4038,17 +3678,17 @@ case 'ttp':
 					break
 			    	case 'add':  
                     if (!isElite) return reply(nayzelite)	
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isBotGroupAdmins) return reply(`「❗」ESTE COMANDO SOLO SE PUEDE USAR CUANDO EL BOT ES ADMIN`)
-					if (args.length < 1) return reply('A quien quieres añadir?')
-					if (args[0].startsWith('08')) return reply('Utiliza el código de país')
+					if (!isGroup) return reply(`GRUP ONLY`)
+					if (!isGroupAdmins) return reply(`LU ADMIN??`)
+					if (!isBotGroupAdmins) return reply(`BOT BUKAN ADMIN`)
+					if (args.length < 1) return reply('Yang mau di add jin ya?')
+					if (args[0].startsWith('08')) return reply('Gunakan kode negara mas')
 					try {
 					num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
 					nayla.groupAdd(from, [num])
 					} catch (e) {
 					console.log('Error :', e)
-					reply('No se pudo agregar el destino, tal vez porque es privado')
+					reply('Gagal menambahkan target, mungkin karena di private')
 					}  
 					break 
 				     
@@ -4064,25 +3704,25 @@ case 'ttp':
 
                     case 'bug':  
                     if (!isElite) return reply(nayzelite)	
-                    if (args.length < 1) return reply(`Ejemplo ${prefix}bug antilink`)
+                    if (args.length < 1) return reply(`contoh ${prefix}bug antilink`)
                     const bug1 = body.slice(5)
                     if (bug1.length > 300) return nayla.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', msgType.text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "caption": `*MY BOTZ NEW*`} } }})
                     var nomor = nay.participant
-                    const bug2 = `*[REPORTE DE ERROR]*\nRemitente ${pushname} \nNúmero : @${nomor.split("@s.whatsapp.net")[0]}\nMensaje : ${bug1}`
+                    const bug2 = `*[LAPOR ERROR FITUR]*\nDARI ${pushname} \nNomor : @${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${bug1}`
                     var optionsp = {
                     text: bug2,
                     contextInfo: {mentionedJid: [nomor]},
                     }                     
                     nayla.sendMessage(`${setting.ownerNumber}@s.whatsapp.net`, optionsp, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "caption": `*TERIMAKASIH TELAT REPORT BUG*`} } } })                    
-                   reply('Se a entregado el informe del error, Informes falsos causaran bloqueo.')                     
+                   reply('REPORT BUG TELAH TERSAMPAIKAN. TERIMAKASIH TELAH MELAPORKAN FITUR')                     
 					break   
 					case 'chat':  
                     if (!isElite) return reply(nayzelite)	
-                    if (args.length < 1) return reply(`Ejemplo ${prefix}chat halo min apa kabar`)
+                    if (args.length < 1) return reply(`contoh ${prefix}chat halo min apa kabar`)
                     const cet1 = body.slice(6)
-                    if (cet1.length > 300) return nayla.sendMessage(from, 'Lo siento, texto demasiado largo, máximo 300 texto', msgType.text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "caption": cr} } } })
+                    if (cet1.length > 300) return nayla.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', msgType.text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "caption": cr} } } })
                     var nomor = nay.participant
-                    const cet2 = `*[ CHAT DE USUARIO ]*\nRemitente ${pushname} \nNúmero : @${nomor.split("@s.whatsapp.net")[0]}\nMensaje : ${cet1}`
+                    const cet2 = `*[ CHAT PENGGUNA ]*\nDARI ${pushname} \nNomor : @${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${cet1}`
                     var optionsp = {
                     text: cet2,
                     contextInfo: {mentionedJid: [nomor]},
@@ -4171,7 +3811,7 @@ case 'ttp':
 			 	    var F3 = F.split("&")[2]; 
                     reply(naylachan)
                     anu = await getBuffer(`https://api.xteam.xyz/magernulis?nama=${F1}&kelas=${F2}&text=${F3}&APIKEY=${apixteam}`)
-                    nayla.sendMessage(from, anu, image, {caption: `n𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇`, quoted: nay})
+                    nayla.sendMessage(from, anu, image, {caption: `nih kak`, quoted: nay})
                     break
                     case 'nulis2':  
                     if (!isElite) return reply(nayzelite)	
@@ -4668,7 +4308,7 @@ case 'ttp':
                    	case 'welcome':  
                     if (!isElite) return reply(nayzelite)	
 					if (!isGroup) return reply(`GROUP ONLY`)
-					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isGroupAdmins) return reply(`LU ADMIN??`)
 					if (args.length < 1) return reply('PILIH 1/0')
 					if (Number(args[0]) === 1) {
 					if (isWelkom) return reply('*SUDAH AKTIF* !!!')
@@ -4683,28 +4323,28 @@ case 'ttp':
 					reply(`......`)
 					}
 					break  
-                    case 'antilink':
-                    if (!isElite) return reply(nayzelite)
-                    if (!isGroup) return reply(mess.only.group)	 
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('Hmmmm')
+                    case 'antilink':  
+                    if (!isElite) return reply(nayzelite)	 
+                    if (!isGroup) return reply(`GROUP ONLY`)
+					if (!isGroupAdmins) return reply(`LU ADMIN??`)
+					if (args.length < 1) return reply('PILIH 1/0')
 					if (Number(args[0]) === 1) {
-						if (isAntiLink) return reply('Ya estaba activo 🙄')
-						antilink.push(from)
-						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
-						reply('Se activo con exito✔️')
+					if (isEventon) return reply('*SUDAH AKTIF* !!!')
+					antilink.push(from)
+					fs.writeFileSync('./nayla/antilink.json', JSON.stringify(antilink))
+					reply('*[❗] ACTIVATED ANTILINK*')
 					} else if (Number(args[0]) === 0) {
-						antilink.splice(from, 1)
-						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
-						reply('Desactivar con éxito la función de bienvenida en este grupo ✔️')
+					antilink.splice(from, 1)
+					fs.writeFileSync('./nayla/antilink.json', JSON.stringify(antilink))
+					reply('*[❗] DEACTIVATED ANTILINK*')
 					} else {
-						reply('1 para activar, 0 para desactivar')
+					reply(`PILIH 1/0`)
 					}
-                    break
+					break					 
 					case 'botx':  
                     if (!isElite) return reply(nayzelite)	 
 					if (!isGroup) return reply(`GROUP ONLY`)
-					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isGroupAdmins) return reply(`LU ADMIN??`)
 					if (args.length < 1) return reply('PILIH 1/0')
 					if (Number(args[0]) === 1) {
 					if (isEventon) return reply('*SUDAH AKTIF* !!!')
@@ -4723,7 +4363,7 @@ case 'ttp':
 					case 'antigay':  
                     if (!isElite) return reply(nayzelite)	
 					if (!isGroup) return reply(`GROUP ONLY`) 
-					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isGroupAdmins) return reply(`LU ADMIN??`)
 					if (args.length < 1) return reply('PILIH 1/0')
 					if (Number(args[0]) === 1) {
 					if (isEventon) return reply('*SUDAH AKTIF* !!!')
@@ -4741,7 +4381,7 @@ case 'ttp':
 					case 'antibocil':  
                     if (!isElite) return reply(nayzelite)	
 					if (!isGroup) return reply(`GROUP ONLY`) 
-					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isGroupAdmins) return reply(`LU ADMIN??`)
 					if (args.length < 1) return reply('PILIH 1/0')
 					if (Number(args[0]) === 1) {
 					if (isEventon) return reply('*SUDAH AKTIF* !!!')
@@ -4759,7 +4399,7 @@ case 'ttp':
 					case 'antiwibu':  
                     if (!isElite) return reply(nayzelite)	 
 					if (!isGroup) return reply(`GROUP ONLY`)
-					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isGroupAdmins) return reply(`LU ADMIN??`)
 					if (args.length < 1) return reply('PILIH 1/0')
 					if (Number(args[0]) === 1) {
 					if (isEventon) return reply('*SUDAH AKTIF* !!!')
@@ -4778,7 +4418,7 @@ case 'ttp':
 					case 'antijawa':  
                     if (!isElite) return reply(nayzelite)	
 					if (!isGroup) return reply(`GROUP ONLY`) 
-					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isGroupAdmins) return reply(`LU ADMIN??`)
 					if (args.length < 1) return reply('PILIH 1/0')
 					if (Number(args[0]) === 1) {
 					if (isEventon) return reply('*SUDAH AKTIF* !!!')
@@ -5028,7 +4668,7 @@ case 'attp':
                     break
                     case 'addprem':  
                     if (!isElite) return reply(nayzelite)	
-					if (!isOwner) return reply(`「❗」ESTE COMANDO SOLO PUEDE SER USADO POR MI CREADOR.`)
+					if (!isOwner) return reply(`LU OWNER?`)
 					adprem = `${args[0].replace('@','')}@s.whatsapp.net`
 					prem.push(adprem)
 					fs.writeFileSync('./nayla/prem.json', JSON.stringify(prem))
@@ -5036,7 +4676,7 @@ case 'attp':
 					break				
 					case 'dellprem':  
                     if (!isElite) return reply(nayzelite)	 
-					if (!isOwner) return reply(`「❗」ESTE COMANDO SOLO PUEDE SER USADO POR MI CREADOR.`)
+					if (!isOwner) return reply(`LU OWNER?`)
 					delp = body.slice(10)
 					prem.splice(`${delp}@s.whatsapp.net`, 1)
 					fs.writeFileSync('./nayla/prem.json', JSON.stringify(prem))
@@ -5045,7 +4685,7 @@ case 'attp':
 					case 'group':  
 					case 'grupo':
                     if (!isElite) return reply(nayzelite)	
-					if (!isGroup) return reply(mess.only.group)
+					if (!isGroup) return reply(`GRUP ONLY`)
 					if (!isGroupAdmins) return reply(`NO ERES ADMIN JAJAJAJ`)
 					if (!isBotGroupAdmins) return reply(`LU ADMIN?`)
 					if (args[0] === 'abrir') {
@@ -5056,11 +4696,10 @@ case 'attp':
 						nayla.groupSettingChange(from, GroupSettingChange.messageSend, true)
 					}				 
 					break  
-					
 					case 'hidetag10':  
                     if (!isElite) return reply(nayzelite)	              
-				    if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
+				    if (!isGroup) return reply(`GRUP ONLY`)
+					if (!isGroupAdmins) return reply(`LU ADMIN??`)
 					var value = body.slice(10)
 					var group = await nayla.groupMetadata(from)
 					var member = group['participants']
@@ -5073,90 +4712,6 @@ case 'attp':
 					contextInfo: { mentionedJid: mem },
 					quoted: nay
 					}
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					break    
-					case 'hidetag20':  
-                    if (!isElite) return reply(nayzelite)	              
-				    if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					var value = body.slice(10)
-					var group = await nayla.groupMetadata(from)
-					var member = group['participants']
-					var mem = []
-					member.map( async adm => {
-					mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
-					})
-					var options = {
-					text: value,
-					contextInfo: { mentionedJid: mem },
-					quoted: nay
-					}
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					break    
- case 'hidetag30':  
-                    if (!isElite) return reply(nayzelite)	              
-				    if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					var value = body.slice(10)
-					var group = await nayla.groupMetadata(from)
-					var member = group['participants']
-					var mem = []
-					member.map( async adm => {
-					mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
-					})
-					var options = {
-					text: value,
-					contextInfo: { mentionedJid: mem },
-					quoted: nay
-					}
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
-					nayla.sendMessage(from, options, text)					 
 					nayla.sendMessage(from, options, text)					 
 					nayla.sendMessage(from, options, text)					 
 					nayla.sendMessage(from, options, text)					 
@@ -5305,7 +4860,24 @@ case 'attp':
 				    nayla.sendMessage(from, to, image, {caption: '𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑂𝑇', quoted:nay1})
 				    break
 					
-					
+					case 'ingfo':  
+                    if (!isElite) return reply(nayzelite)	              
+				    if (!isGroup) return reply(`GRUP ONLY`)
+					if (!isGroupAdmins) return reply(`LU ADMIN??`)
+					var value = body.slice(7)
+					var group = await nayla.groupMetadata(from)
+					var member = group['participants']
+					var mem = []
+					member.map( async adm => {
+					mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+					})
+					var options = {
+					text: `[ *INGFO TERBARU!!!* ]\nDARI : *${pushname}*\nINGFO : *${value}*`,
+					contextInfo: { mentionedJid: mem },
+					quoted: nay
+					}
+					nayla.sendMessage(from, options, text, {quoted: nay1})					 
+					break
 /* ===================================================[ Felixcrack ]==============================================================*/    
 /*=====================================================[ API FREEEE ]==============================================================*/                  	    
 /*====================================================[ CASE BY NAYLA ]==============================================================*/                    	 
@@ -5322,10 +4894,10 @@ case 'attp':
 	                hehe = await getBuffer(`https://videfikri.com/api/textmaker/wanted/?urlgbr=${anu.display_url}&text1=Dicari&text2=${tels}`)
 	                nayla.sendMessage(from, hehe, image, {quoted:nay1})
 	               	} else {
-	           	    reply(`ENVIAR FOTOS CON TEXTO ${command}`)
+	           	    reply(`KIRIM FOTO DENGAN CAPTION ${command}`)
 	              	}
 	               	break
-	               	case 'deteccionderostro':  
+	               	case 'deteksiwajah':  
                     if (!isElite) return reply(nayzelite)		 
 	               	var imgbb = require('imgbb-uploader')
 	               	if ((isMedia && !nay.message.videoMessage || isQuotedImage) && args.length == 0) {
@@ -5336,7 +4908,7 @@ case 'attp':
 	             	hehe = await getBuffer(`http://lolhuman.herokuapp.com/api/facedetect?apikey=${l0lhuman}&img=${anu.display_url}`)
                   	nayla.sendMessage(from, hehe, image, {quoted:nay1})
 		            } else {
-		            reply(`ENVIAR FOTOS CON TEXTO ${command}`)
+		            reply(`KIRIM FOTO DENGAN CAPTION ${command}`)
 	              	}
 	                break
 	            	case 'removebg':  
@@ -5350,10 +4922,10 @@ case 'attp':
 	                hehe = await getBuffer(`http://api.lolhuman.xyz/api/removebg?apikey=${l0lhuman}&img=${anu.display_url}`)
 	                nayla.sendMessage(from, hehe, image, {quoted:nay1})
                 	} else {
-	                reply(`ENVIAR FOTOS CON TEXTO ${command}`)
+	                reply(`KIRIM FOTO DENGAN CAPTION ${command}`)
                 	}
 	                break	 
-	                case 'detecciondeedad':  
+	                case 'deteksiumur':  
                     if (!isElite) return reply(nayzelite)	 
 	                var imgbb = require('imgbb-uploader')
 	                if ((isMedia && !nay.message.videoMessage || isQuotedImage) && args.length == 0) {
@@ -5365,7 +4937,7 @@ case 'attp':
                   	gender = `[ DETEKSI UMUR ] \nMenurut bot.. seseorang di gambar tersebut berumur = *${hehe.result}*`
 	                nayla.sendMessage(from, gender, text, {quoted:nay1})
                  	} else {
-                  	reply(`ENVIAR FOTOS CON TEXTO ${command}`)
+                  	reply(`KIRIM FOTO DENGAN CAPTION ${command}`)
                 	}
 	                break
                 	case 'gtav':  
@@ -5380,7 +4952,7 @@ case 'attp':
                   	hehe = await getBuffer(`https://videfikri.com/api/textmaker/gtavposter/?urlgbr=${anu.display_url}`)
 	                nayla.sendMessage(from, hehe, image, {quoted:nay1})
 	                } else {
-                  	reply(`ENVIAR FOTOS CON TEXTO ${command}`)
+                  	reply(`KIRIM FOTO DENGAN CAPTION ${command}`)
 	                }
 	                break
                  	case 'facebookpage':  
@@ -5395,10 +4967,10 @@ case 'attp':
                   	hehe = await getBuffer(`https://videfikri.com/api/textmaker/facebookprof/?urlgbr=${anu.display_url}&text=${tels}`)
 	                nayla.sendMessage(from, hehe, image, {quoted:nay1})
 	                } else {
-                  	reply(`ENVIAR FOTOS CON TEXTO ${command}`)
+                  	reply(`KIRIM FOTO DENGAN CAPTION ${command}`)
                   	}
 	                break
-	                case 'disfraz':  
+	                case 'costumwp':  
                     if (!isElite) return reply(nayzelite)		 
 	                var imgbb = require('imgbb-uploader')
 	                if ((isMedia && !nay.message.videoMessage || isQuotedImage) && args.length == 0) {
@@ -5410,10 +4982,10 @@ case 'attp':
                   	hehe = await getBuffer(`https://videfikri.com/api/textmaker/customwp/?urlgbr=${anu.display_url}`)
 	                nayla.sendMessage(from, hehe, image, {quoted:nay1})
 	                } else {
-                  	reply(`ENVIAR FOTOS CON TEXTO ${command}`)
+                  	reply(`KIRIM FOTO DENGAN CAPTION ${command}`)
 	                }
                 	break
-                	case 'playadenoche':  
+                	case 'pantaimalam':  
                     if (!isElite) return reply(nayzelite)		 
                  	var imgbb = require('imgbb-uploader')
                 	if ((isMedia && !nay.message.videoMessage || isQuotedImage) && args.length == 0) {
@@ -5425,10 +4997,10 @@ case 'attp':
                   	hehe = await getBuffer(`https://videfikri.com/api/textmaker/nightbeach/?urlgbr=${anu.display_url}`)
                     nayla.sendMessage(from, hehe, image, {quoted: nay1})
                  	} else {
-                  	reply(`ENVIAR FOTOS CON TEXTO ${command}`)
+                  	reply(`KIRIM FOTO DENGAN CAPTION ${command}`)
                   	}
                 	break
-	                case 'lapiz':  
+	                case 'pensil':  
                     if (!isElite) return reply(nayzelite)		 
 	                var imgbb = require('imgbb-uploader')
 	                if ((isMedia && !nay.message.videoMessage || isQuotedImage) && args.length == 0) {
@@ -5440,10 +5012,10 @@ case 'attp':
                   	hehe = await getBuffer(`https://videfikri.com/api/textmaker/pencil/?urlgbr=${anu.display_url}`)
 	                nayla.sendMessage(from, hehe, image, {quoted:nay1})
                  	} else {
-                  	reply(`ENVIAR FOTOS CON TEXTO ${command}`)
+                  	reply(`KIRIM FOTO DENGAN CAPTION ${command}`)
                  	}
                  	break 
-	                case 'quemar':  
+	                case 'bakar':  
                     if (!isElite) return reply(nayzelite)		 
                  	var imgbb = require('imgbb-uploader')
                  	if ((isMedia && !nay.message.videoMessage || isQuotedImage) && args.length == 0) {
@@ -5455,10 +5027,10 @@ case 'attp':
                   	hehe = await getBuffer(`https://videfikri.com/api/textmaker/burneffect/?urlgbr=${anu.display_url}`)
                     nayla.sendMessage(from, hehe, image, {quoted:nay1})
                   	} else {
-                  	reply(`ENVIAR FOTOS CON TEXTO ${command}`)
+                  	reply(`KIRIM FOTO DENGAN CAPTION ${command}`)
                  	}
                 	break
-                	case 'pistolacruzada':  
+                	case 'crossgun':  
                     if (!isElite) return reply(nayzelite)		 
                 	var imgbb = require('imgbb-uploader')
 	                if ((isMedia && !nay.message.videoMessage || isQuotedImage) && args.length == 0) {
@@ -5470,49 +5042,50 @@ case 'attp':
                   	hehe = await getBuffer(`https://videfikri.com/api/textmaker/crossgun/?urlgbr=${anu.display_url}`)
 	                nayla.sendMessage(from, hehe, image, {quoted:nay1})
                 	} else {
-                  	reply(`ENVIAR FOTOS CON TEXTO ${command}`)
+                  	reply(`KIRIM FOTO DENGAN CAPTION ${command}`)
                   	}
                 	break
 	 
-					 case 'demote':
-			      case 'dm' : 
-			if (!isElite) return reply(nayzelite)	
-					if (!isGroup) return reply(mess.only.group)
+					 case 'demote':  
+                    if (!isElite) return reply(nayzelite)	
+					if (!isGroup) return reply('GRUB ONLY')
 					if (!isGroupAdmins) return reply('LU ADMIN??')
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (nay.message.extendedTextMessage === undefined || nay.message.extendedTextMessage === null) return reply('La etiqueta de destino que desea que no sea un administrador.!')
+					if (!isBotGroupAdmins) return reply('BOT BUKAN ADMIN')
+					if (nay.message.extendedTextMessage === undefined || nay.message.extendedTextMessage === null) return reply('tag member')
 					mentioned = nay.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = 'Pedidos recibidos, ya no eres adm :\n'
-						for (let _ of mentioned) {
-							teks += `@${_.split('@')[0]}\n`
-						}
-						mentions(teks, mentioned, true)
-						nayla.groupDemoteAdmin(from, mentioned)
-					} else {
-						mentions(`Comando recibido, quitando adm a: : @${mentioned[0].split('@')[0]} 🥵`, mentioned, true)
-						nayla.groupDemoteAdmin(from, mentioned)
+					teks = ''
+					for (let _ of mentioned) {
+					teks += `*jabatan kamu di copot*🏃 :\n`
+					teks += `@_.split('@')[0]`
 					}
+					mentions(teks, mentioned, true)
+					nayla.groupDemoteAdmin(from, mentioned)
+					} else {
+					mentions(`yahhh @${mentioned[0].split('@')[0]} lu bukan admin lagi bro :(`, mentioned, true)
+					nayla.groupDemoteAdmin(from, mentioned)
+					}					 
 					break
-				    case 'promote':
-				if (!isElite) return reply(nayzelite)	
-					if (!isGroup) return reply(mess.only.group)
+				    case 'promote':  
+                    if (!isElite) return reply(nayzelite)	
+					if (!isGroup) return reply('GRUB ONLY')
 					if (!isGroupAdmins) return reply('LU ADMIN??')
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (nay.message.extendedTextMessage === undefined || nay.message.extendedTextMessage === null) return reply('Tag target yang ingin di jadi admin!')
+					if (!isBotGroupAdmins) return reply('BOT BUKAN ADMIN')
+					if (nay.message.extendedTextMessage === undefined || nay.message.extendedTextMessage === null) return reply('tag member')
 					mentioned = nay.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = 'Pedidos aceptados, te conviertes en administrador :\n'
-						for (let _ of mentioned) {
-							teks += `@${_.split('@')[0]}\n`
-						}
-						mentions(teks, mentioned, true)
-						nayla.groupMakeAdmin(from, mentioned)
-					} else {
-						mentions(`Perintah di terima, @${mentioned[0].split('@')[0]} Kamu Menjadi Admin Di Group *${groupMetadata.subject}*`, mentioned, true)
-						nayla.groupMakeAdmin(from, mentioned)
+					teks = ''
+					for (let _ of mentioned) {
+					teks += `𝗦𝗲𝗹𝗮𝗺𝗮𝘁🥳 𝗮𝗻𝗱𝗮 𝗻𝗮𝗶𝗸 𝗺𝗲𝗻𝗷𝗮𝗱𝗶 𝗮𝗱𝗺𝗶𝗻 𝗴𝗿𝗼𝘂𝗽 (+_+) :\n`
+					teks += `@_.split('@')[0]`
 					}
-					break 
+					mentions(teks, mentioned, true)
+					nayla.groupMakeAdmin(from, mentioned)
+			 	    } else {
+					mentions(`𝗦𝗲𝗹𝗮𝗺𝗮𝘁🥳 @${mentioned[0].split('@')[0]} *anda naik menjadi admin group* (+_+)`, mentioned, true)
+					nayla.groupMakeAdmin(from, mentioned)
+					}					 
+					break	                     
                     case 'oxo':                    
                     if (!isElite) return reply(nayzelite)
                     oxz1 = `[ ${oxo11} ]\n`
@@ -5530,21 +5103,21 @@ case 'attp':
 					dtt = body.slice(8)
 					ranm = getRandom('.mp3')
 					rano = getRandom('.ogg')
-					dtt.length > 900
+					dtt.length > 1900
 						? reply('¿Quieres escribir la biblia o que??')
 						: gtts.save(ranm, dtt, function () {
-							exec(`ffmpeg -i ${ranm} -ar 7 -vn -c:a libopus ${rano}`, (err) => {
+							exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
 								fs.unlinkSync(ranm)
 								buff = fs.readFileSync(rano)
 								if (err) return reply('Perdon, FALLE:(')
-								nayla.sendMessage(from, buff, audio, { quoted: nay, ptt: false })
+								nayla.sendMessage(from, buff, audio, { quoted: nay, ptt: true })
 								fs.unlinkSync(rano)
 							})
 						})
 					break
 					case 'pesan':
                     if (!isElite) return reply(nayzelite)
-					if (!isGroup) return reply(mess.only.group)
+					if (!isGroup) return reply('GRUB ONLY')
 				    if (args.length < 1) return reply(`[❗] EjemploH??\n${prefix}${command}pesan @tagmember|halo kak`)
 					var FG = body.slice(8)
 					var F1 = FG.split("|")[0];
@@ -5658,7 +5231,7 @@ case 'attp':
 					break 
 					case 'bugtroli':  
                     if (!isElite) return reply(nayzelite)	 
-					if (!isOwner) return reply('「❗」ESTE COMANDO SOLO PUEDE SER USADO POR MI CREADOR.?')
+					if (!isOwner) return reply('LU OWNER??')
 					anu = await nayla.chats.all()
 					if (isMedia && !nay.message.videoMessage || isQuotedImage) {
 					const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(nay).replace('quotedM','m')).message.extendedTextMessage.contextInfo : nay
@@ -6077,7 +5650,7 @@ case 'attp':
 				    if (budy.includes("pendejo")){
 					if (!isGroup) return
 					if (!isAntijawa) return
-					if (isGroupAdmins) return reply('Eres admin, te salvaste ??')
+					if (isGroupAdmins) return reply('Eres admin, te salvaste 🧐')
 					nayla.updatePresence(from, Presence.composing)
 					if (messagesC.includes("@62812874133914")) return reply("izin diterima")
 					var kic = `${sender.split("@")[0]}@s.whatsapp.net`
@@ -6138,7 +5711,9 @@ case 'attp':
 					reply("5 Segundo")
 					}, 0)
 				    }				    
-				       
+				    if (budy.includes("cekprefix")){
+				    reply(`BOT PREFIX ${prefix}`)
+				    }
 				    if (budy.includes("Yamete")){
 				    const F2 = fs.readFileSync('sound/yamete.m4a')
                     nayla.sendMessage(from, F2, MessageType.audio, {mimetype: 'audio/mp4', ptt:true, quoted: nay1})
@@ -6155,42 +5730,91 @@ case 'attp':
                     const F3 = fs.readFileSync('menu/tag4.webp')
                     nayla.sendMessage(from, F3, sticker, {quoted: nay1})
                     }
+                    if (budy.includes(`Sticker`)){
+                    if ((isMedia && !nay.message.videoMessage || isQuotedImage) && args.length == 0) {
+					const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(nay).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : nay
+					const media = await nayla.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.webp')
+					await ffmpeg(`./${media}`)
+					.input(media)
+					.on('start', function (cmd) {					 
+					})
+					.on('error', function (err) {
+					console.log(`Error : ${err}`)
+					fs.unlinkSync(media)
+					reply(naylachan)
+					})
+					.on('end', function () {
+					console.log('SELESAI JANGAN LUPA SUBSCRIBE YT RIMURUBOTZ')
+					nayla.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: nay1})
+				    fs.unlinkSync(media)
+					fs.unlinkSync(ran)
+					})
+					.addOutputOptions([`-vcodec`, `libwebp`, `-vf`, `scale='min(320,iw)':  
+                    min'(320,ih)':  
+                    force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+				    .toFormat('webp')
+					.save(ran)
+					} else if ((isMedia && nay.message.videoMessage.seconds < 11 || isQuotedVideo && nay.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
+					const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(nay).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : nay
+					const media = await nayla.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.webp')
+					reply(naylachan)
+					await ffmpeg(`./${media}`)
+					.inputFormat(media.split('.')[1])
+					.on('start', function (cmd) {					 
+					})
+					.on('error', function (err) {
+					console.log(`Error : ${err}`)
+					fs.unlinkSync(media)
+					tipe = media.endsWith('.mp4') ? 'video' : 'gif'
+					reply(`Gagal, pada saat mengkonversi ${tipe} ke stiker`)
+					})
+					.on('end', function () {
+					console.log('SELESAI JANGAN LUPA SUBSCRIBE YT RIMURUBOTZ')
+					nayla.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: nay1})
+					fs.unlinkSync(media)
+					fs.unlinkSync(ran)
+					})
+					.addOutputOptions([`-vcodec`, `libwebp`, `-vf`, `scale='min(320,iw)':  
+                   	min'(320,ih)':  
+                   	force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+					.toFormat('webp')
+					.save(ran)
+					} else {
+					reply(`Etiqueta una imagen o un video con ${prefix}sticker De mientras se crea el sticker ve a seguirme a YouTube`)
+					}
+                    }
                     if (budy.includes(`Creador`)){
                     nayla.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: nay1})
                     nayla.sendMessage(from, 'Este es el número de mi dueño, no molestar con mamadas al menos q sean de verdad okno nah jaja, pero no jodas mucho o te manda a la vrg',MessageType.text, { quoted: nay} )				  
                     }
                     if (budy.includes(`Te amo bot`)){
-                    	nayla.sendMessage(from, 'Yo a ti uwu',MessageType.text, { quoted: nay} )				  
+                    	reply ('Yo a ti uwu')
                     }
-                  
                     if (budy.includes(`Botgime`)){
                     const F3 = fs.readFileSync('sound/gime.mp3')
-                    nayla.sendMessage(from, F3, audio, {
-                    quoted: nay, ptt : true
-	                })
-	                }
-                    if(budy.match('Jack')){
+                    nayla.sendMessage(from, F3, audio, {quoted: nay1, ptt : true})
+                    }
+                    if (budy.includes(`Jack`)){
                     const F3 = fs.readFileSync('sound/jacksito.mp3')
-	                nayla.sendMessage(from, F3, audio, {
-                    quoted: nay, ptt : true
-	                })
-	                }
-	                if (budy.includes('Bot lindo')){
-                    nayla.sendMessage(from, 'Gracias👉🏻👈🏻',MessageType.text, { quoted: nay} )			
-                    }	  
-                    if (budy.includes(`Puto`)){
-                    nayla.sendMessage(from, 'Que quieres puto pendejo de mierda',MessageType.text, { quoted: nay} )				  
+                    nayla.sendMessage(from, F3, audio, {quoted: nay1, ptt : true})
+                    }
+                    if (budy.includes(`puto`)){
+                    const F3 = fs.readFileSync('src/fxxxx')
+                    nayla.sendMessage(from,MessageType.text, { quoted: nay} )			  
                     }
                     if (budy.includes(`Bot`)){
                     const F3 = fs.readFileSync('stickers/no.webp')
                     nayla.sendMessage(from, F3, sticker, {quoted: nay1})
-                    }	  
-                    if (budy.includes(`Hola`)){
-                    nayla.sendMessage(from, 'Hola🌚😳',MessageType.text, { quoted: nay} )	
-                    }			  
+                    }
                     if (budy.includes(`Gracias`)){
-                    	nayla.sendMessage(from, 'De Nada 🤗',MessageType.text, { quoted: nay} )				  
-}
+                    	reply ('De nada ☺️')
+                    }
+                    if (budy.includes(`Hola`)){
+                    	reply ('Hola😳🌚')
+                    
+                    }
                
 /* ===================================================[ Felixcrack ]==============================================================*/    
 /*=====================================================[ API FREEEEE ]==============================================================*/                  	    
