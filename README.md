@@ -15,7 +15,7 @@
 <a href="#"><img title="ACTUALIZACIONES" src="https://img.shields.io/badge/MANTENIMIENTO-SI-blue.svg"</a>
 </p>
 
-## Clonar este proyecto
+## Instale las dependencias
 ```bash
 > pkg upgrade & update
 > pkg install git
@@ -24,12 +24,12 @@
 > pkg install imagemagick
 
 ```
-## Clonar este proyecto
+## Clone este proyecto
 ```bash
 > git clone https://github.com/Fxmods/FELIXCRACK-BOT-FX-69
 ```
 
-## Instale las dependencias:
+## Instala el bot
 Antes de ejecutar el siguiente comando, asegúrese de estar en el directorio del proyecto que
 acabas de clonar !!
 
@@ -37,7 +37,7 @@ acabas de clonar !!
 > cd FELIXCRACK-BOT-FX-69
 > bash install.sh
 
-### Uso
+### Inicia el bot
 ```bash
 > npm start
 ```
