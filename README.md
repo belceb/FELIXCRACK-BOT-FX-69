@@ -24,9 +24,11 @@
 > pkg install imagemagick
 
 ```
-## Clone este proyecto
+## Clona este proyecto
 ```bash
 > git clone https://github.com/Fxmods/FELIXCRACK-BOT-FX-69
+
+> cd FELIXCRACK-BOT-FX-69
 ```
 
 ## Instala el bot
@@ -34,11 +36,11 @@ Antes de ejecutar el siguiente comando, asegúrese de estar en el directorio del
 acabas de clonar !!
 
 ```bash
-> cd FELIXCRACK-BOT-FX-69
+
 > bash install.sh
 
 ### Inicia el bot
-```bash
+
 > npm start
 ```
 Canal De YouTube:
